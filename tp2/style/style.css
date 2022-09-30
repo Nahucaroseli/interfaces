@@ -477,9 +477,7 @@ header{
 }
 
 .logo{
-    background-image: url(../img/Logo.png);
-    background-size: cover;
-    width: 4.8rem;
+    width: 4.5rem;
 }
 
 .menu{
@@ -549,19 +547,19 @@ height: 390px;
     background:var(--secondary-hover);
     cursor: pointer;
 }
+
 .btn-game{
     background: var(--secondary);
-border-radius: 7px;
-width: 109px;
-height: 32px;
-left: 60px;
-top: 23px;
-color: white;
-font-size: 15px;
-
-
+    border-radius: 7px;
+    width: 109px;
+    height: 32px;
+    left: 60px;
+    top: 23px;
+    color: white;
+    font-size: 15px;
 }
-.btn-game a{
+
+.btn-game a {
     text-decoration: none;
     color: white;
 }
