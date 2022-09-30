@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(function () {
             document.getElementById('spinner').style.visibility = "hidden";
             document.getElementById('content').style.visibility = "visible";
-        }, 5000);
+        }, 1000); //cambiar!!!
     }
 
 
