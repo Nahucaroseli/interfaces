@@ -17,6 +17,88 @@
     --acento-shadow:#968809;
 }
 
+.hero-section-mask{
+    background-image: url(../img/hero-mask.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 423px;
+    height: 618px;
+    left: 145px;
+    top: 15.3%;
+}
+
+.game-card-description{
+    width: 100%;
+    height: 17.5rem;
+    background: var(--primary);
+    display: flex;
+}
+
+
+
+.game-card-text h2{
+
+    margin-bottom: 4rem;
+}
+
+
+.game-card-description h2, .game-card-description p{
+    margin-left: 3rem;
+}
+
+.game-description{
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    height: 75.1rem;
+    grid-row: 3;
+    padding: 3rem;
+    gap: 4rem;
+}
+
+.hero-section h1{
+    position: relative;
+    width: 258px;
+    height: 225px;
+    left: 61%;
+    top: 200px;
+}
+
+.hero-section-game-title{
+    background-image: url(../img/hero-gametitle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+    width: 258px;
+    height: 225px;
+    left: 861px;
+    top: 220px;
+}
+
+.hero-section button{
+    background: var(--secondary);
+    color: white;
+    font-family: var(--p);
+    position: relative;
+    height: 32px;
+    width: 92px;
+    left: 65%;
+    top: 0px;
+    border-radius: 7px;
+
+
+}
+
+.hero-section{
+    background-image: url(../img/hero-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    grid-column: 1/-1;
+    height: 41.5rem;
+}
+
 
 a{
     font-family: var(--p);
@@ -34,12 +116,12 @@ body{
 
 p{
     font-family: var(--p);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 h2{
     font-family: var(--h2);
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 h3{
@@ -48,6 +130,7 @@ h3{
 
 h1{
     font-family: var(--h1);
+    font-size: 2.5rem;
 }
 
 header{
@@ -151,7 +234,7 @@ header{
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(12,auto);
 }
 
@@ -182,7 +265,7 @@ header{
 }
 
 .menu-user.active{
-    left: 69%;
+    left: 69.5%;
 }
 .menu-user{
     transition: 0.3s;
@@ -194,6 +277,7 @@ header{
     width: 439px;
     height: 586px;
     top: 0;
+    z-index: 1;
 }
 
 .form-item .container p{
@@ -474,6 +558,12 @@ left: 60px;
 top: 23px;
 color: white;
 font-size: 15px;
+
+
+}
+.btn-game a{
+    text-decoration: none;
+    color: white;
 }
 
 .nav-list{
