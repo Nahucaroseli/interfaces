@@ -94,8 +94,8 @@
     background-image: url(../img/hero-background.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
     grid-column: 1/-1;
+    width: 100%;
     height: 41.5rem;
 }
 
@@ -494,51 +494,37 @@ header{
     cursor: pointer;
 }
 
-.characters-section{
-    padding: 3rem;
-    grid-row: 4;
-    width: 80rem;
-    height: 29.1rem;
+.character-card{
+    width: 270px;
+    border-radius: 10px;
+height: 390px;
+overflow: hidden;
+
+
+
+
+
 }
+.character-card img{
+width: 270px;
+height: 390px;
+border-radius: 10px;
 
-
-
-.carousel-characters > *{
-    text-align: center;
 }
 
 .character-card:hover h1{
     opacity: 0;
 }
 
-.card-overlay-4{
-    position: absolute;
-    background-color: rgba(0, 0, 0,0.6);
-    bottom: -253.7%;
-    width: 272px;
-    left: 66.5%;
-    height: 390px;
-    border-radius: 10px;
-    opacity: 0;
-}
-
-
-
-.card-overlay-3{
-    position: absolute;
-    background-color: rgba(0, 0, 0,0.6);
-    bottom: -253.7%;
-    width: 271px;
-    left: 45.5%;
-    height: 390px;
-    border-radius: 10px;
-    opacity: 0;
+.character-card:hover img{
+    transform: scale(1.3);
+    transition: 1s;
 }
 
 .card-overlay-1{
-    position: absolute;
+    position: relative;
     background-color: rgba(0, 0, 0,0.6);
-    bottom: -253.7%;
+    bottom: 123%;
     width: 270px;
     height: 390px;
     border-radius: 10px;
@@ -546,49 +532,65 @@ header{
 }
 
 .card-overlay-2{
-    position: absolute;
+    position: relative;
     background-color: rgba(0, 0, 0,0.6);
-    bottom: -253.7%;
-    left: 24.4%;
-    width: 271px;
+    bottom: 123%;
+    width: 270px;
     height: 390px;
+    left: 0%;
+    border-radius: 10px;
     opacity: 0;
 }
 
-
-.card-overlay-1:hover, .card-overlay-2:hover, .card-overlay-3:hover, 
-.card-overlay-4:hover{
+.card-overlay-1:hover , .card-overlay-2:hover{
     opacity: 1;
-    cursor: pointer;
 }
-
 
 
 .character-card h1{
-    position: absolute;
-    bottom: -258%;
-
+    position: relative;
+    top: -16%;
 }
 
 
-.character-card img{
-    height: 100%;
+.slider-inner{
+    display: flex;
+    justify-content: space-between;
+    width: 3000px;
+}
+
+.slider-inner .character-card > *{
+    text-align: center;
+}
+
+.slider-wrap{
+    grid-column: 1/-1;
+    grid-row: 4;
+    margin-left: 3rem;
+    cursor: grab;
+}
+
+
+.slider-characters{
+
+    height: 450px;
     width: 100%;
-    transition: all 500ms  ease-out;
-    border-radius: 10px;
+    overflow: scroll;
+}
+
+.progress-bar-inner{
+    width: 0;
+    background: var(--primary);
+    height: 10px;
 }
 
 
-.character-card:hover >img{
-    transform: scale(1.3);
+.slider-characters::-webkit-scrollbar{
+    display: none;
 }
-.character-card{
-    background: violet;
-    width: 270px;
-    height: 390px;
-    overflow:hidden;
-    border-radius: 10px;
-}
+
+
+
 
 
 .carousel-item{
@@ -611,12 +613,6 @@ header{
     grid-column: 1/3;
 }
 
-
-.carousel-characters{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
 
 .carousel-img{
 margin: 1rem;
