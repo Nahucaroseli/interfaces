@@ -350,6 +350,8 @@ header{
 .story-section{
     grid-column: 1/3;
     grid-row: 8;
+    padding: 1rem;
+    margin-top: 4rem;
 }
 
 
@@ -492,6 +494,102 @@ header{
     cursor: pointer;
 }
 
+.characters-section{
+    padding: 3rem;
+    grid-row: 4;
+    width: 80rem;
+    height: 29.1rem;
+}
+
+
+
+.carousel-characters > *{
+    text-align: center;
+}
+
+.character-card:hover h1{
+    opacity: 0;
+}
+
+.card-overlay-4{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.6);
+    bottom: -253.7%;
+    width: 272px;
+    left: 66.5%;
+    height: 390px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+
+
+.card-overlay-3{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.6);
+    bottom: -253.7%;
+    width: 271px;
+    left: 45.5%;
+    height: 390px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.card-overlay-1{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.6);
+    bottom: -253.7%;
+    width: 270px;
+    height: 390px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.card-overlay-2{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.6);
+    bottom: -253.7%;
+    left: 24.4%;
+    width: 271px;
+    height: 390px;
+    opacity: 0;
+}
+
+
+.card-overlay-1:hover, .card-overlay-2:hover, .card-overlay-3:hover, 
+.card-overlay-4:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.character-card h1{
+    position: absolute;
+    bottom: -258%;
+
+}
+
+
+.character-card img{
+    height: 100%;
+    width: 100%;
+    transition: all 500ms  ease-out;
+    border-radius: 10px;
+}
+
+
+.character-card:hover >img{
+    transform: scale(1.3);
+}
+.character-card{
+    background: violet;
+    width: 270px;
+    height: 390px;
+    overflow:hidden;
+    border-radius: 10px;
+}
+
 
 .carousel-item{
     width: 270px;
@@ -513,6 +611,12 @@ header{
     grid-column: 1/3;
 }
 
+
+.carousel-characters{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
 
 .carousel-img{
 margin: 1rem;
