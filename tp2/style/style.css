@@ -353,8 +353,29 @@ header{
     padding: 1rem;
     margin-top: 4rem;
 }
+ul.breadcrumb{
+    padding: -5px 35px;
+    list-style: none;
+}
 
+ul.breadcrumb li{
+    display: inline;
+    font-size: 18px;
+}
 
+ul.breadcrumb li+li:before{
+    padding: 8px;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a{
+    color: white;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover{ 
+    text-decoration: underline;
+}
 
 .instruction-section{
     grid-column: 1/3;
