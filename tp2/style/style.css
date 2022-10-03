@@ -28,6 +28,57 @@
     top: 15.3%;
 }
 
+
+.game-data #price{
+    position:absolute;
+    top: 42%;
+    left: 4%;
+}
+.game-data p{
+    position: absolute;
+    margin-left: 2px;
+    margin: 0;
+    top:10%;
+    left: 4%;
+}
+
+.card-free-game-home{
+    position: relative;
+    width: 270px;
+    height: 360px;
+background: red;
+}
+
+.game-data .btn-game{
+    position: absolute;
+    top: 55%;
+    left:55%;
+}
+
+
+.card-free-game-home img{
+    width: 270px;
+    height: 273px;
+    left: 0px;
+    top: 1px;
+}
+
+.card-free-game-home #tag{
+    position:absolute;
+width: 102px;
+height: 32px;
+left: 0px;
+}
+
+.game-data{
+    position: relative;
+    left: 0;
+    background:var(--primary);
+    width: 270px;
+    top: -4px;
+    height: 87px;
+}
+
 .game-card-description{
     width: 100%;
     height: 17.5rem;
@@ -197,16 +248,15 @@ header{
     background-image: url(../img/close-icon.png);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 3rem;
-    left: 0;    
+    height: 3rem;  
     top: 2rem;
-    left: 23rem;
-    width: 3rem;
+    right: 1.7rem;
+    width: 10%;
     cursor: pointer;
 }
 .frame-separator{
     position: absolute;
-    width: 413px;
+    width: 90%;
     height: 6px;
     background:white;
     left: 13px;
@@ -263,9 +313,11 @@ header{
     width: 9rem;
 
 }
+/*left: 69.5%;
+width: 439px;*/
 
 .menu-user.active{
-    left: 69.5%;
+    left: 0%;
 }
 .menu-user{
     transition: 0.3s;
@@ -274,7 +326,7 @@ header{
     flex-direction: column;
     position: fixed;
     background-color: var(--primary);
-    width: 439px;
+    width: 100%;
     height: 586px;
     top: 0;
     z-index: 1;
@@ -586,6 +638,15 @@ border-radius: 10px;
 
 .slider-wrap{
     grid-column: 1/-1;
+    grid-row: 2;
+    margin-left: 3rem;
+    cursor: grab;
+
+
+}
+
+.slider-wrap-2{
+    grid-column: 1/-1;
     grid-row: 4;
     margin-left: 3rem;
     cursor: grab;
@@ -598,6 +659,7 @@ border-radius: 10px;
     width: 100%;
     overflow: scroll;
 }
+
 
 .progress-bar-inner{
     width: 0;
@@ -679,6 +741,7 @@ left: 60px;
 top: 23px;
 color: white;
 font-size: 15px;
+border: none;
 
 
 }
@@ -739,40 +802,20 @@ height: 360px;
 
 
 
-@media screen and (min-width:768px) {
-
-    .carousel{
-        width: 50rem;
-    }
-
-    .slider{
-        width: 60rem;
-        background-size: cover;
-        height: 300px;
-    }
-    
-}
-
-
-@media screen and (min-width:900px) {
-
-    .carousel{
-        width: 55rem;
-    }
-
-    .slider{
-        width: 80rem;
-        background-size: cover;
-        height: 300px;
-    }
-    
-}
 
 @media screen and (min-width:1100px) { 
 
     .navbar{
         position: absolute;
         left: 6%;
+    }
+
+    .menu-user.active{
+        left: 60%;
+    }
+
+    .menu-user{
+        width: 40%;
     }
 
 
@@ -789,42 +832,5 @@ height: 360px;
         justify-content: space-around;
     }
 
-    .title{
-        position: absolute;
-        width: 894px;
-        height: 47px;
-        left: 26px;
-        top: 1667px;
-    }
-
-    .recent-section{
-        display: flex;
-    }
-
-    .vector2{
-        position: absolute;
-        right: 2%;
-    }
-
-    .btn-game{
-        position: absolute;
-        top: 45%;
-        left: 70%;
-    }
-
-    .slider{
-        background-size: cover;
-        height: 330px;
-    }
-
-    .carousel{
-        width: 40rem;
-    }
-
-    .gameTitle h1{
-        position: absolute;
-        font-size: 30px;
-        left: 50%;
-    }
 
 }

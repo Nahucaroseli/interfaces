@@ -26,43 +26,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 
-    const slider = document.querySelector(".slider-inner");
-    const progressbar = document.querySelector(".progress-bar-inner");
+    const slider = document.querySelectorAll(".slider-inner");
+    const progressbar = document.querySelectorAll(".progress-bar-inner");
 
     let slidergrabbed = false;
 
-    slider.parentElement.addEventListener("scroll", (e) =>{
-        progressbar.style.width = `${getScrollPercentage()}%`;
+    slider.forEach(a =>{
+        a.parentElement.addEventListener("scroll",(e)=>{
+            progressbar.forEach(element=>{
+                element.style.width = `${getScrollPercentage()}%`;
+            })
+        })
     })
 
-    slider.addEventListener("mousedown", (e) =>{
-        slidergrabbed = true;
-        slider.style.cursor = "grabbing";
-
-    })
-    slider.addEventListener("mouseup", (e) =>{
-        slidergrabbed = false;
-        slider.style.cursor = "grab";
-        
+    slider.forEach(element=>{
+        element.addEventListener("mousedown", (e)=>{
+            slidergrabbed = true;
+            element.style.cursor = "grabbing";
+        })
     })
 
-    slider.addEventListener("mouseleave", (e) =>{
-        slidergrabbed = false;
-        slider.style.cursor = "grab";
-        
+    slider.forEach(element=>{
+        element.addEventListener("mouseup", (e)=>{
+            slidergrabbed = false;
+            element.style.cursor = "grab";
+        })
+    })
+
+
+    slider.forEach(element=>{
+        element.addEventListener("mouseleave", (e)=>{
+            slidergrabbed = false;
+            element.style.cursor = "grab";
+        })
     })
     
-    slider.addEventListener("mousemove", (e) =>{
-        if(slidergrabbed){
-            slider.parentElement.scrollLeft -= e.movementX;
-        }
-        
+     slider.forEach(element=>{
+        element.addEventListener("mousemove", (e)=>{
+           if(slidergrabbed){
+            element.parentElement.scrollLeft -= e.movementX;
+           }
+        })
     })
 
     function getScrollPercentage(){
-        return ((slider.parentElement.scrollLeft/(slider.parentElement.scrollWidth - slider.parentElement.clientWidth)) *100);
-    }
-
-
+         slider.forEach(element=>{
+            return element.parentElement.scrollLeft / (element.parentElement.scrollWidth- element.parentElement.clientWidth) * 100;
+    } )
+  } 
+    
 })
 
