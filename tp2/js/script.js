@@ -27,17 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     const slider = document.querySelectorAll(".slider-inner");
-    const progressbar = document.querySelectorAll(".progress-bar-inner");
+    //const progressbar = document.querySelectorAll(".progress-bar-inner");
+
 
     let slidergrabbed = false;
 
-    slider.forEach(a =>{
-        a.parentElement.addEventListener("scroll",(e)=>{
-            progressbar.forEach(element=>{
-                element.style.width = `${getScrollPercentage()}%`;
-            })
-        })
-    })
+    // slider.forEach(a =>{
+    //     a.parentElement.addEventListener("scroll",(e)=>{
+    //         progressbar.forEach(element=>{
+    //                 element.style.width = `${(a.parentElement.scrollLeft/(a.parentElement.scrollWidth-a.parentElement.clientWidth))*100}%`;
+    //         })
+    //     })
+    // })
 
     slider.forEach(element=>{
         element.addEventListener("mousedown", (e)=>{
@@ -69,11 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
-    function getScrollPercentage(){
-         slider.forEach(element=>{
-            return element.parentElement.scrollLeft / (element.parentElement.scrollWidth- element.parentElement.clientWidth) * 100;
-    } )
-  } 
     
 })
 

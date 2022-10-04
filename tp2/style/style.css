@@ -42,7 +42,7 @@
     left: 4%;
 }
 
-.card-free-game-home{
+.card-game-home,.card-game-cart-home{
     position: relative;
     width: 270px;
     height: 360px;
@@ -55,15 +55,22 @@ background: red;
     left:55%;
 }
 
+.card-game-cart-home .game-data .btn-game{
+    position: absolute;
+    top: 55%;
+    left:30%;
+}
 
-.card-free-game-home img{
+
+
+.card-game-home img{
     width: 270px;
     height: 273px;
     left: 0px;
     top: 1px;
 }
 
-.card-free-game-home #tag{
+.card-game-home #tag{
     position:absolute;
 width: 102px;
 height: 32px;
@@ -368,13 +375,18 @@ width: 439px;*/
 .footer-section{
     margin-top: 8rem;
     width: 100%;
-    height: 12.5rem;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
     background: var(--primary);
     grid-row: 11;
     grid-column: 1/-1;
+}
+
+.footer-section div{
+    width: 136px;
+    margin-left: 1rem;
 }
 
 .social-icons{
@@ -802,8 +814,26 @@ height: 360px;
 
 
 
+@media screen and (min-width:800px) {
+    .footer-section{
+        margin-top: 8rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background: var(--primary);
+        grid-row: 11;
+        grid-column: 1/-1;
+    }
+}
+
 
 @media screen and (min-width:1100px) { 
+   
+    
+    
 
     .navbar{
         position: absolute;
