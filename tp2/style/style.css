@@ -667,7 +667,7 @@ border-radius: 10px;
 
 .slider-characters{
 
-    height: 450px;
+    height: 400px;
     width: 100%;
     overflow: scroll;
 }
@@ -681,8 +681,20 @@ border-radius: 10px;
 
 
 .slider-characters::-webkit-scrollbar{
+    background-color: var(--primary-secondary)
+}
+
+.slider-characters::-webkit-scrollbar-thumb{
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.slider-characters::-webkit-scrollbar-corner{
     display: none;
 }
+
+
+
 
 
 
