@@ -238,16 +238,23 @@ header{
 
 .user-name{
     position: absolute;
-    left: 5%;
-    top: 20%;
+    left: 4%;
+    top: 15%;
     font-size: 2.1rem;
 }
 
-.menu-user ul li{
+
+
+.burger-menu h1{
+    margin-left: 2rem;
+}
+
+.menu-user ul li, .burger-menu ul li{
     list-style: none;
     font-size: 20px;
     margin-top: 2rem;
 }
+
 
 .close-icon{
     position: absolute;
@@ -322,10 +329,10 @@ header{
 /*left: 69.5%;
 width: 439px;*/
 
-.menu-user.active{
+.menu-user.active, .burger-menu.active{
     left: 0%;
 }
-.menu-user{
+.menu-user , .burger-menu{
     transition: 0.3s;
     left: 100%;
     display: flex;
@@ -333,7 +340,7 @@ width: 439px;*/
     position: fixed;
     background-color: var(--primary);
     width: 100%;
-    height: 586px;
+    height: 100%;
     top: 0;
     z-index: 1;
 }
@@ -568,6 +575,17 @@ header{
     width: 4.8rem;
 }
 
+.profile{
+    background-image: url(../img/user-image.png);
+    background-size: cover;
+    align-self: center;
+    position: absolute;
+    right: 15%;
+    width: 2.1rem;
+    height: 40px;
+    cursor: pointer;
+}
+
 .menu{
     background-image: url(../img/Menu.png); 
     align-self: center;
@@ -650,7 +668,7 @@ border-radius: 10px;
 .slider-wrap{
     grid-column: 1/-1;
     grid-row: 2;
-    margin-left: 3rem;
+    margin-left: 1rem;
     cursor: grab;
 
 
@@ -683,8 +701,66 @@ border-radius: 10px;
 }
 
 
+.main-carousel{
+    width: 26rem;
+    height: 26rem;
+}
 
 
+.main-carousel .main-carousel-button{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 35%;
+
+
+
+}
+
+.main-carousel .text-carousel{
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    opacity: 0;
+}
+
+
+.main-carousel .btn-game{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.main-carousel .prev{
+    background-image: url(../img/vector1.png);
+    background-size: cover;
+    left: 1rem;
+}
+.main-carousel .next{
+    background-image: url(../img/vector2.png);
+    background-size: cover;
+    right: 0.1rem;
+
+}
+
+.main-carousel ul{
+    list-style: none;
+
+}
+
+.main-carousel img{
+    width:26rem;
+}
+
+
+.main-carousel .slide{
+    position: absolute;
+    opacity: 0;
+}
+
+.main-carousel .slide[data-active],.main-carousel .text-carousel[data-text-active]{
+    opacity: 1;
+}
 
 
 
@@ -828,12 +904,17 @@ height: 360px;
         grid-row: 11;
         grid-column: 1/-1;
     }
+    .slider-wrap{
+        margin-left: 2rem;
+    }
 }
 
 
 @media screen and (min-width:1100px) { 
    
-    
+    .burger-menu #mobile-version-tag{
+        display: none;
+    }
     
 
     .navbar{
@@ -841,12 +922,13 @@ height: 360px;
         left: 6%;
     }
 
-    .menu-user.active{
+    .menu-user.active, .burger-menu.active{
         left: 60%;
     }
 
-    .menu-user{
+    .menu-user,.burger-menu{
         width: 40%;
+        height: 70%;
     }
 
 
