@@ -27,18 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     const slider = document.querySelectorAll(".slider-inner");
-    //const progressbar = document.querySelectorAll(".progress-bar-inner");
+    const progressbar = document.querySelectorAll(".progress-bar-inner");
 
 
     let slidergrabbed = false;
 
-    // slider.forEach(a =>{
-    //     a.parentElement.addEventListener("scroll",(e)=>{
-    //         progressbar.forEach(element=>{
-    //                 element.style.width = `${(a.parentElement.scrollLeft/(a.parentElement.scrollWidth-a.parentElement.clientWidth))*100}%`;
-    //         })
-    //     })
-    // })
+     slider.forEach(a =>{
+    a.parentElement.addEventListener("scroll",(e)=>{
+             progressbar.forEach(element=>{
+                if(a.dataset.slider === element.dataset.bar){
+                    element.style.width = `${(a.parentElement.scrollLeft/(a.parentElement.scrollWidth-a.parentElement.clientWidth))*100}%`;
+                }        
+            })
+         })
+     })
 
     slider.forEach(element=>{
         element.addEventListener("mousedown", (e)=>{
