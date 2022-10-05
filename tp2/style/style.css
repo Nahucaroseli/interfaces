@@ -46,7 +46,6 @@
     position: relative;
     width: 270px;
     height: 360px;
-background: red;
 }
 
 .game-data .btn-game{
@@ -641,7 +640,7 @@ border-radius: 10px;
 .slider-inner{
     display: flex;
     justify-content: space-between;
-    width: 3000px;
+    width: 2000px;
 }
 
 .slider-inner .character-card > *{
@@ -666,7 +665,6 @@ border-radius: 10px;
 
 
 .slider-characters{
-
     height: 400px;
     width: 100%;
     overflow: scroll;
