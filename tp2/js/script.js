@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function loader() {
         setTimeout(function () {
             document.getElementById('spinner').style.visibility = "hidden";
+            document.getElementById('loading').style.visibility = "hidden";
+            document.getElementById('load-bar').style.visibility = "hidden";
             document.getElementById('content').style.visibility = "visible";
-        }, 1000);
+        }, 5000);
     }
 
 
