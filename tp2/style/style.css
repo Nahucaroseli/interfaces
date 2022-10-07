@@ -391,7 +391,6 @@ width: 439px;*/
 .form-item{
     height: 6.8rem;
     width: 75.5rem;
-
     background: var(--primary);
     margin-top: 2rem;
 }
@@ -402,6 +401,13 @@ width: 439px;*/
     position: absolute;
     left: 9%;
     margin-bottom: 89;
+
+}
+
+
+.form-icons {
+    display: flex;
+    flex-direction: row;
 
 }
 
