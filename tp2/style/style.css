@@ -405,10 +405,13 @@ width: 439px;*/
 }
 
 
-.form-icons {
+.form-item .form-icons {
+    width: 50%;
     display: flex;
     flex-direction: row;
-
+    position: relative;
+    left: 12%;
+    top: 25px;
 }
 
 
