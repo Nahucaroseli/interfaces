@@ -410,8 +410,30 @@ width: 439px;*/
     display: flex;
     flex-direction: row;
     position: relative;
-    left: 12%;
+    left: 11%;
     top: 25px;
+}
+
+.form-item .form-icons i{
+    margin: 0;
+   
+    font-size: 1.5rem;
+}
+
+.form-item .form-icons i:hover{
+    cursor: pointer;
+}
+
+.form-item p#answer-button{
+    position: relative;
+    margin: 0;
+    width:0;
+    top: 5%;
+    left: 21%;
+}
+
+.form-item .form-icons i#comment-icon{
+    margin-left: 1.3rem;
 }
 
 
@@ -791,7 +813,7 @@ border-radius: 10px;
 .main-carousel .text-carousel{
     position: absolute;
     text-align: center;
-    top: 40%;
+    top: 50%;
     opacity: 0;
     transition: 200ms opacity ease-in-out;
 }
@@ -799,8 +821,8 @@ border-radius: 10px;
 
 .main-carousel .btn-game-lobo{
     position: absolute;
-    top: 50%;
-    left: 60%;
+    top: 60%;
+    left: 35%;
 }
 
 .main-carousel .prev{
@@ -1034,6 +1056,12 @@ height: 360px;
 
 @media screen and (min-width:1100px) { 
 
+    .main-carousel .btn-game-lobo{
+        top: 45%;
+        left: 50%;
+    }
+
+
     #load-bar{
         border: 1px solid var(--secondary);
         background: var(--primary-secondary);
@@ -1096,6 +1124,9 @@ height: 360px;
     }
     .main-carousel .prev{
         left: 0.0rem;
+    }
+    .main-carousel .next{
+        right: 4rem;
     }
 
     .main-carousel .btn-game{
