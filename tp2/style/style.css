@@ -911,10 +911,10 @@ height: 390px;
 
 
 
-.btn-game:hover{
+/*.btn-game:hover{
     background:var(--secondary-hover);
     cursor: pointer;
-}
+}*/
 .btn-game{
     background: var(--secondary);
     border-radius: 7px;
@@ -925,10 +925,39 @@ height: 390px;
     color: white;
     font-size: 15px;
     border: none;
-
-
 }
 
+.btn-game span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-game span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn-game:hover span {
+    padding-right: 25px;
+  }
+
+
+.btn-game:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+
+
+
+/****************/
+/*** Lobo ******/
 .btn-game-lobo:hover {
     text-decoration: none;
     color: black;
@@ -936,11 +965,11 @@ height: 390px;
 }
 
 .btn-game-lobo{
-    background: var(--secondary); /* color de fondo */
-    color: white; /* color de fuente hover */
-    border: 2px solid  var(--primary); /* tama�o y color de borde */
+    background: var(--secondary);
+    color: white;
+    border: 2px solid  var(--primary); 
     padding: 16px 20px 30px;
-    border-radius: 25px; /* redondear bordes */
+    border-radius: 25px;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -953,7 +982,7 @@ height: 390px;
 
   .btn-game-lobo::after {
     content: "";
-    background: var(--secondary-light); /* color de fondo hover */
+    background: var(--secondary-light);
     position: absolute;
     z-index: -1;
     padding: 16px 20px;
