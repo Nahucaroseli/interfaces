@@ -4,13 +4,26 @@ document.addEventListener("DOMContentLoaded", () => {
     loader();
     //Loader
     function loader() {
-        setTimeout(function () {
-            document.getElementById('spinner').style.visibility = "hidden";
-            document.getElementById('loading').style.visibility = "hidden";
-            document.getElementById('load-bar').style.visibility = "hidden";
-            document.getElementById('content').style.visibility = "visible";
-        }, 5000);
-    }
+        let percentage = 0;
+        const text = document.getElementById('load-percentage');
+        if(text){
+            const interval = setInterval(()=>{
+                if(percentage<100){
+                    percentage= percentage + 10;
+                    document.getElementById('load-percentage').innerHTML = `${percentage}%`;    
+                }
+            },450);
+            setTimeout(function () {
+                clearInterval(interval);
+                document.getElementById('loading').style.visibility = "hidden";
+                document.getElementById('load-percentage').style.visibility = "hidden";
+                document.getElementById('load-bar').style.visibility = "hidden";
+                document.getElementById('content').style.visibility = "visible";
+            }, 5000);
+        }
+        }
+    
+        
 
 
     //burger menu
@@ -53,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-            console.log(newIndex);
             let newIndexText = [...texts.children].indexOf(activeText) + offsetText;
 
             if(newIndex < 0 && newIndexText <0){
