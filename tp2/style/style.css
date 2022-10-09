@@ -496,14 +496,13 @@ width: 439px;*/
 }
 .menu-hierarchy,.carousel-img-title,.help-section,
 .video-section,.story-section, .form-section{
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .story-section{
     grid-column: 1/3;
     grid-row: 8;
     padding: 1rem;
-    margin-top: 4rem;
 }
 ul.breadcrumb{
     padding: -5px 35px;
@@ -781,7 +780,7 @@ border-radius: 10px;
 }
 
 .slider-characters{
-    height: 500px;
+    height: 450px;
     width: 100%;
     overflow: scroll;
 }
