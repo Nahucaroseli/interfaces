@@ -640,8 +640,10 @@ top: 18%;
 }
 
 
+
+
 #load-percentage{
-    position: absolute;
+    position: fixed;
     left: 48%;
     top: 60%;
 }
@@ -883,14 +885,6 @@ border-radius: 10px;
     transition: 200ms opacity ease-in-out;
 }
 
-.hero
-
-
-.main-carousel .btn-game-lobo{
-    position: absolute;
-    top: 60%;
-    left: 35%;
-}
 
 .main-carousel .prev{
     background-image: url(../img/vector1.png);
@@ -1036,8 +1030,8 @@ right: 0;
     z-index: 1;
     overflow: hidden;
     display: inline-block;
-    left: 180%;
-    top: 25%;
+    left: 40%;
+    top: 65%;
     width: 150px;
     height: 32px;
 }
