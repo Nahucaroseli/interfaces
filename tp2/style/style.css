@@ -918,11 +918,6 @@ height: 390px;
 }
 
 
-
-/*.btn-game:hover{
-    background:var(--secondary-hover);
-    cursor: pointer;
-}*/
 .btn-game{
     background: var(--secondary);
     border-radius: 7px;
