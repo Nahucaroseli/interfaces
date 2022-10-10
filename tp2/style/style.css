@@ -121,10 +121,11 @@ left: 0px;
     display: flex;
 }
 
-
+.history {
+    width: 90%;
+} 
 
 .game-card-text h2{
-
     margin-bottom: 4rem;
 }
 
@@ -1067,8 +1068,6 @@ right: 0;
 .nav-list{
     left: 100%;
     max-width: 100%;
-    
-
 }
 
 .element-scale:hover{
@@ -1079,13 +1078,14 @@ right: 0;
 
 .coming-btn:hover{
     cursor: pointer;
-
 }
-.coming-btn{
 
+.coming-btn{
     background:var(--acento-light);
+    padding: 10px;
     border-radius: 10px;
     -webkit-text-stroke: 0.8px black;
+    text-decoration: none;
 }
 .navbar{
     min-height: 70px;
@@ -1236,7 +1236,7 @@ height: 360px;
 
     .menu-user,.burger-menu{
         width: 40%;
-        height: 80%;
+        height: 90%;
     }
 
 
