@@ -1,0 +1,23 @@
+:root{
+    --h1:'Inter';
+    --h2:'Roboto';
+    --h3:'Roboto';
+    --p:'Roboto';
+    --primary:#322755;
+    --primary-secondary:#0C0329;
+    --primary-acento:#645690;
+    --primary-light:#9B92B9;
+    --secondary:#F45F18;
+    --secondary-shadow:#802A00;
+    --secondary-hover:#FF8B54;
+    --secondary-light:#FFB490;
+    --acento:#CABC42;
+    --acento-secondary:#F2E784;
+    --acento-light:#F8EFA6;
+    --acento-shadow:#968809;
+}
+
+body{
+    background-color: var(--primary-secondary);
+}
+
