@@ -21,3 +21,10 @@ body{
     background-color: var(--primary-secondary);
 }
 
+
+#canvas{
+    background-color: var(--primary);
+    position: relative;
+    left: 15%;
+}
+
