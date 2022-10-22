@@ -1,7 +1,8 @@
-const MAX = 30;
+const MAX = 20;
 
-const urlPlayer1 = "./img/personaje1.png"
-const urlPlayer2 = "./img/personaje2.png"
+const urlPlayer1 = "./img/personaje1.png";
+const urlPlayer2 = "./img/personaje2.png";
+const urlBoardCell = "./img/celda.png";
 const SIZE_FIG=75;
 let canvas = document.querySelector("#canvas");
 let ctx = canvas.getContext('2d');
@@ -18,13 +19,24 @@ let circlesHeight = canvasHeight / 2;
 
 
 
-let fichas = [];
+let figuras = [];
 let lastClickedFigure = null;
 let isMouseDown = false;
 
 function addFigure(){
+  
     drawFigures();
+    drawBoardCells();
     drawFigure();
+
+}
+
+
+
+function addCell(x,y){
+    let color = urlBoardCell;
+    let cell = new Celda(x,y-150,SIZE_FIG,SIZE_FIG,color,ctx);
+    figuras.push(cell);
 }
 
 
@@ -33,7 +45,18 @@ function addFicha(_color,_posX, _posY){
     let posY = _posY;
     let color = _color;
     let ficha = new Ficha(posX, posY, color, ctx, (SIZE_FIG / 2) * .5);
-    fichas.push(ficha);
+    figuras.push(ficha);
+}
+
+function drawBoardCells(){
+    for (let x = 0; x < boardFil; x++) {
+        for (let y = 0; y < boardCol; y++) {
+            boardWidth += SIZE_FIG;
+            addCell(boardWidth, boardHeight);
+        }
+        boardWidth -= SIZE_FIG * boardCol;
+        boardHeight += SIZE_FIG;
+    }
 }
 
 function drawFigures(){
@@ -56,8 +79,8 @@ function drawFigures(){
 
 function drawFigure(){
     clearCanvas();
-    for(let i=0; i< fichas.length;i++){
-        fichas[i].draw();
+    for(let i=0; i< figuras.length;i++){
+        figuras[i].draw();
     }
 }
 
@@ -68,9 +91,11 @@ function clearCanvas(){
 }
 
 
+
+
 function addFigures(){
     addFigure();
-    if(fichas.length <MAX){
+    if(figuras.length <MAX){
         setTimeout(addFigures,333);
     }
 }
@@ -111,8 +136,8 @@ setTimeout(()=>{
 
 
 function findClickedFigure(x,y){
-    for(let i=0; i< fichas.length;i++){
-        const element = fichas[i];
+    for(let i=0; i< figuras.length;i++){
+        const element = figuras[i];
         if(element.isPointInside(x,y)){
             return element;
         }
