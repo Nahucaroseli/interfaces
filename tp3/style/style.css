@@ -15,6 +15,7 @@
     --acento-secondary:#F2E784;
     --acento-light:#F8EFA6;
     --acento-shadow:#968809;
+    --border: 5px;
 }
 
 .hero-section-mask{
@@ -1259,4 +1260,176 @@ height: 360px;
     }
 
 
+}
+
+
+/**********************/
+/***** 4 en linea *****/
+/*********************/
+
+.title{
+    width: 50%;
+    text-align: center;
+    background-color: var(--main-bg);
+    border-radius: 10px;
+    margin-left: 25%;
+    font-family: var(--google-font);
+}
+
+.menu_4linea .help, .menu_4linea h3{
+    background-color: var(--primary-secondary);
+    padding: 0.5% 0%;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    font-family: var(--google-font);
+}
+
+.menu_4linea .help .p1{
+    width: 50%;
+    border: 1px solid black;
+}
+
+.menu_4linea .help .p2{
+    width: 50%;
+    border: 1px solid black;
+}
+
+.menu_4linea .tokens, .menu_4linea .help{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.menu_4linea .tokens button{
+    border: none;
+    background-color: unset;
+}
+
+.menu_4linea .tokens button:hover{
+    border: 3px solid var(--primary);
+}
+
+.menu_4linea .tokens h4{
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    padding: 1%;
+    font-family: var(--google-font);
+}
+
+.menu_4linea .tokens .chooseToken1, .menu_4linea .tokens .chooseToken2{
+    border: var(--border) solid var(--primary-secondary);
+    border-radius: var(--border);
+    width: 30%;
+    margin-top: 1%;
+    flex-direction: row;
+    padding: 1%;
+}
+
+.tokens .chooseToken1, .tokens .chooseToken2{
+    border: black 1px solid;
+}
+
+.chooseToken1 > button, .chooseToken2 > button{
+    width: 100px;   
+    height: 100px;
+    margin-left: 10%;
+    margin-top: 1%;
+    border-radius: var(--border);
+}
+
+.chooseToken1 > button img, .chooseToken2 > button img{
+    width: 70px;
+    height: 70px;
+}
+
+.chooseBoard{
+    text-align: center;
+    font-family: var(--google-font);
+}
+
+.chooseBoard .board{
+    display: inline-block;
+}
+
+.chooseBoard .board{
+    all: unset;
+    border: 3px solid var(--primary-secondary);
+    border-radius: var(--border);
+    padding: 0.5%;
+}
+
+.chooseBoard button:hover, .chooseBoard button:focus{
+    background-color: var(--primary-secondary);
+}
+
+.game > button{
+    all: unset;
+    padding: 1%;
+    background-color: var(--primary-secondary);
+    margin-left: 47%;
+    margin-top: 1%;
+    font-size: 20px;
+    font-family: var(--google-font);
+}
+
+#finishGame{
+    width: 50%;
+    text-align: center;
+    background-color: var(--primary-secondary);
+    border-radius: var(--border);
+    margin-left: 23%;
+    margin-top: 5%;
+    padding: 1%;
+    font-family: var(--google-font);
+}
+
+#finishGame > button{
+    all: unset;
+    border: 1px solid black;
+    padding: 1%;
+    background-color: white;
+    border-radius: var(--border);
+    font-family: var(--google-font);
+}
+
+
+.jugador{
+    width: 20%;
+    margin-left: 20%;
+    font-family: var(--google-font);
+}
+
+.timer{
+    width: 10%;
+    height: 80px;
+    font-size: 30px;
+    margin-left: 75%;
+    margin-top: -3%;
+    font-family: var(--google-font);
+}
+
+.canvasPreview{
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.canvasPreview canvas{
+    border: var(--border) solid var(--primary-secondary);
+    border-radius: var(--border);
+}
+
+.team{
+    width: 50%;
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: var(--border);
+    margin-left: 23%;
+    margin-top: 1%;
+    padding: 1%;
+    font-size: 20px;
+    font-family: var(--google-font);
 }

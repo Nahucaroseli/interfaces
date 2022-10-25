@@ -15,7 +15,7 @@
             <h1>4 en Linea</h1>
         </div>
 
-        <div class="menu">
+        <div class="menu_4linea">
             <h3> Puntos a tener en cuenta a la hora de jugar ! </h3>
             <div class="help">
                 <p>
@@ -55,12 +55,24 @@
 
                 <div class="chooseToken2">
                     <h4> Elegir ficha para el Jugador 2</h4>
-                    <button id="./img/blackPanther.png" class="token1"><img src="img/blackPanther.png" alt="Pantera Negra"></button>
-                    <button id="./img/blackWidow.png" class="token2"><img src="img/blackWidow.png" alt="Viuda Negra"></button>
-                    <button id="./img/captainAmerica.png" class="token3"><img src="img/captainAmerica.png" alt="Capitan America"></button>
-                    <button id="./img/hulk.png" class="token4"><img src="img/hulk.png" alt="Hulk"></button>
-                    <button id="./img/spiderman.png" class="token5"><img src="img/spiderman.png" alt="Iron Man"></button>
-                    <button id="./img/thor.png" class="token6"><img src="img/thor.png" alt="Thor"></button>
+                    <button id="./img/4linea_1.jpeg" class="token1">
+                        <img src="img/4linea_1.jpeg" alt="4linea_1">
+                    </button>
+                    <button id="./img/4linea_2.jpeg" class="token2">
+                        <img src="img/4linea_2.jpeg" alt="4linea_2">
+                    </button>
+                    <button id="./img/4linea_3.jpeg" class="token3">
+                        <img src="img/4linea_3.jpeg" alt="4linea_3">
+                    </button>
+                    <button id="./img/4linea_4.jpeg" class="token4">
+                        <img src="img/4linea_4.jpeg" alt="4linea_4">
+                    </button>
+                    <button id="./img/4linea_5.jpeg" class="token5">
+                        <img src="img/4linea_5.jpeg" alt="4linea_5">
+                    </button>
+                    <button id="./img/4linea_6.jpeg" class="token6">
+                        <img src="img/4linea_6.jpeg" alt="4linea_6">
+                    </button>
                 </div>
             </div>
         </div>
@@ -77,5 +89,30 @@
         </div>
     </div>
 
-    </body>
+    <div id="finishGame">
+        <h3 id="timeOut"></h3>
+        <button id="menu" onclick="window.location.reload()">Volver a Jugar</button>
+    </div>
+    
+    <h2 class="jugador" id="jugador"></h2>
+
+    <div class="timer" id="timer">
+        <span id="minutos">0</span>:<span id="segundos">0</span>
+    </div>
+
+    <div class="canvasPreview">
+        <canvas id="canvas" width="900" height="600"></canvas>
+    </div>
+
+    
+</body>
+    <script src="js/Token.js"></script>
+    <script src="js/Figure.js"></script>
+    <script src="js/Circle.js"></script>
+    <script src="js/Rectangle.js"></script>
+    <script src="js/Board.js"></script>
+    <script src="js/Help.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/Check.js"></script>
 </html>
