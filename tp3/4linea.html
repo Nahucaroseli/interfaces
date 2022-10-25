@@ -9,8 +9,71 @@
 </head>
 <body>
 
-    <div id="frontGame">
+        <div id="load-bar"></div>
+        <h1 id="load-percentage"></h1>
+        <div id="loading"></div>
+    <div id="content">
+    <header>
+        <a class="logo" href="index.html"></a>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <a class="element-scale" href="index.html">Inicio</a>
+                <a class="element-scale" href="">Shooters</a>
+                <a class="element-scale" href="">Rpg</a>
+                <a class="element-scale" href="">Aventura</a>
+                <a class="element-scale" href="">En el Carrito</a>
+                <a class="coming-btn element-scale" href="cominggame.html">Proximo Lanzamiento</a>
+            </ul>
+        </nav>
+        <div class="profile">
+        </div>
+        <div class="menu_4linea">
+        </div>
+    </header>
 
+    <nav class="menu-user">
+        <div class="close-icon">
+        </div>
+        <div class="user-image">
+        </div>
+
+        <h1 class="user-name">Steve Jobs</h1>
+        <ul>
+            <li id="inicio">Inicio</li>
+            <li>Mi Perfil</li>
+            <li>Contacto</li>
+            <li>Logout</li>
+        </ul>
+        <div class="frame-separator">
+
+        </div>
+        <div class="social-icons">
+        </div>
+    </nav>
+    <nav class="burger-menu">
+        <div class="close-icon">
+        </div>
+        <h1>Categorias</h1>
+        <ul>
+            <a id="mobile-version-tag" class="coming-btn element-scale" href="cominggame.html">Proximo Lanzamiento</a>
+            <li id="mobile-version-tag">Inicio</li>
+            <li id="mobile-version-tag">Recomendados</li>
+            <li id="mobile-version-tag">Shooters</li>
+            <li id="mobile-version-tag">Rpg</li>
+            <li id="mobile-version-tag">Aventura</li>
+            <li id="mobile-version-tag">En el Carrito</li>
+            <li>Carreras</li>
+            <li>Terror</li>
+            <li>Deportes</li>
+            <li>Simuladores</li>
+            <li>Cocina</li>
+            <li>Realidad Virtual</li>
+            <li>Accion</li>
+            <li>Zombis</li>
+        </ul>
+    </nav>
+
+    <div id="frontGame">
         <div class="title">
             <h1>4 en Linea</h1>
         </div>
@@ -85,13 +148,13 @@
         </div>
 
         <div class="game">
-            <button id = "g" onclick="initGame()"> <strong> Jugar </strong> </button>
+            <button id ="g" onclick="initGame()"> <strong> Jugar </strong> </button>
         </div>
     </div>
 
     <div id="finishGame">
         <h3 id="timeOut"></h3>
-        <button id="menu" onclick="window.location.reload()">Volver a Jugar</button>
+        <button id="menu_4linea" onclick="window.location.reload()">Volver a Jugar</button>
     </div>
     
     <h2 class="jugador" id="jugador"></h2>
@@ -103,9 +166,40 @@
     <div class="canvasPreview">
         <canvas id="canvas" width="900" height="600"></canvas>
     </div>
-
+    <footer class="footer-section">
+        <div>
+            <h3>Herramientas</h3>
+            <p>Api</p>
+            <p>Contacto de Dom</p>
+            <p>Webmail</p>
+        </div>
+        <div >
+            <h3>Soporte</h3>
+            <p>Centro de ayuda</p>
+            <p>Guias</p>
+            <p>Niveles de Soporte</p>
+        </div>
+        <div>
+            <h3>Contactenos</h3>
+            <p>Atencion al Cliente</p>
+            <p>1-855-684-5463</p>
+            <p>6-781-921-9012</p>
+        </div>
+        <div >
+            <h3>Noticias</h3>
+            <p>Blog</p>
+            <p>Espacio de Prensa</p>
+            <p>Ecosistema</p>
+        </div>
+        <div>
+            <h3>Redes Sociales</h3>
+            <div class="social-icons">
+            </div>
+        </div>
+    </footer>
     
 </body>
+    <script src="js/script.js"></script>
     <script src="js/Token.js"></script>
     <script src="js/Figure.js"></script>
     <script src="js/Circle.js"></script>
