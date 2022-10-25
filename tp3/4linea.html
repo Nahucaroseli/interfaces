@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Entregable numero 3</title>
+</head>
+<body>
+
+    <div id="frontGame">
+
+        <div class="title">
+            <h1>4 en Linea</h1>
+        </div>
+
+        <div class="menu">
+            <h3> Puntos a tener en cuenta a la hora de jugar ! </h3>
+            <div class="help">
+                <p>
+                    ● Antes de apretar en boton jugar se debe elegir una ficha para cadajugador y la dimension del tablero. <br>
+                    ● Arrastrar y soltar las fichas en las flechas  encima del tablero. <br>
+                    ● Si la ficha se suelta fuera de la flecha va a volver a su posicioninicial.
+                </p>
+                <p>
+                    ● Hasta que el jugador no juegue, no va a cambiar el turno. <br>
+                    ● Los jugadores tienen 10 minutos para poder ganar. <br>
+                    ● Probado en Brave Browser V.1.30.87 / Chrome V.94.0.4606.71
+                </p>
+            </div>
+
+            <div class="tokens">
+                <div class="chooseToken1">
+                    <h4> Elegir ficha para el Jugador 1</h4>
+                    <button id="./img/4linea_1.jpeg" class="token1">
+                        <img src="img/4linea_1.jpeg" alt="4linea_1">
+                    </button>
+                    <button id="./img/4linea_2.jpeg" class="token2">
+                        <img src="img/4linea_2.jpeg" alt="4linea_2">
+                    </button>
+                    <button id="./img/4linea_3.jpeg" class="token3">
+                        <img src="img/4linea_3.jpeg" alt="4linea_3">
+                    </button>
+                    <button id="./img/4linea_4.jpeg" class="token4">
+                        <img src="img/4linea_4.jpeg" alt="4linea_4">
+                    </button>
+                    <button id="./img/4linea_5.jpeg" class="token5">
+                        <img src="img/4linea_5.jpeg" alt="4linea_5">
+                    </button>
+                    <button id="./img/4linea_6.jpeg" class="token6">
+                        <img src="img/4linea_6.jpeg" alt="4linea_6">
+                    </button>
+                </div>
+
+                <div class="chooseToken2">
+                    <h4> Elegir ficha para el Jugador 2</h4>
+                    <button id="./img/blackPanther.png" class="token1"><img src="img/blackPanther.png" alt="Pantera Negra"></button>
+                    <button id="./img/blackWidow.png" class="token2"><img src="img/blackWidow.png" alt="Viuda Negra"></button>
+                    <button id="./img/captainAmerica.png" class="token3"><img src="img/captainAmerica.png" alt="Capitan America"></button>
+                    <button id="./img/hulk.png" class="token4"><img src="img/hulk.png" alt="Hulk"></button>
+                    <button id="./img/spiderman.png" class="token5"><img src="img/spiderman.png" alt="Iron Man"></button>
+                    <button id="./img/thor.png" class="token6"><img src="img/thor.png" alt="Thor"></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chooseBoard">
+            <h3>Dimension del tablero</h3>
+            <button class="board" id=5*6>5x6</button>
+            <button class="board" id=7*6>7x6</button>
+            <button class="board" id=7*8>7x8</button>
+        </div>
+
+        <div class="game">
+            <button id = "g" onclick="initGame()"> <strong> Jugar </strong> </button>
+        </div>
+    </div>
+
+    </body>
+</html>
