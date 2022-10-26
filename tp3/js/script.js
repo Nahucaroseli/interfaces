@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
         userMenu.classList.toggle('active');
 
     })
-    menuIcon.addEventListener("click",() =>{
+    /*menuIcon.addEventListener("click",() =>{
         burgerMenu.classList.toggle('active');
 
-    })
+    })*/
 
 
     //Carousel Main Index

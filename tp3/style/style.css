@@ -1270,7 +1270,7 @@ height: 360px;
 .title{
     width: 50%;
     text-align: center;
-    background-color: var(--primary-acento);
+    background-color: var(--secondary);
     border-radius: 10px;
     margin-left: 25%;
 }
