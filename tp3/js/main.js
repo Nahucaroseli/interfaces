@@ -132,7 +132,7 @@ async function board(){
     board.createLockers();  //Dibuja los circulos dentro del tablero.
     board.drawcontainers(); //Dibuja la flecha que esta por encima del tablero. 
     alllockers.array = board.getArrayLockers(); //Guarda en la constante el arreglo de los circulos.
-    allConteiners.array = board.getArrayConteiners(); ///Guarda en la constante el arreglo de las flechas de arriba del tablero.
+    allConteiners.array = board.getArrayContainers(); ///Guarda en la constante el arreglo de las flechas de arriba del tablero.
     imageBoard.img = img ; //Guarda en la constante la imagen.
     MatrixLockers.matrix=board.getMatrix() //Guarda en la constante la matriz del tablero.
     }

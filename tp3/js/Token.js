@@ -16,7 +16,7 @@ class Token {
     }
 
     getToken2(){
-        return this.token2;
+        return this.token2; //retorna el arreglo con todas las fichas del jugador 2 de esa instacia con lo que se lo llame
     }
 
     
@@ -27,13 +27,13 @@ class Token {
                 let x = 95;
                 let y = 110; 
                 for(let i = 0; i < this.totalTokens; i++){  
-                    let texto = "Fichas jugador 1";
-                     this.context.font="10pt Verdana"; // tipo y tamaño de letra para el texto 
+                     let texto = "Fichas jugador 1";
+                     this.context.fillStyle = 'white';
                      this.context.fillText(texto,10,50); // filltext permite poner texto dentro del canvas , pasamos como parametro el texto que queremos poner y las posiciones
                     let token ; 
                     token = new Circle(x, y, 20, this.colour, this.context); // la ficha circular utlizando la clase circulo que recibe posiciones , tamaño y la imagen que se le va a colocar
                     this.token1.push(token);  // guardamos esa ficha ( "circulo") dentro del arreglo del jugador 1 ya que es el caso 1
-                     y = y + 15; // le sumo a y para que se dibujen en fila 
+                     y = y + 15; // le sumamos a y para que se dibujen en fila 
                 }
                 break;
                 
@@ -42,9 +42,9 @@ class Token {
                 let py = 110;
                 for(let i = 0; i < this.totalTokens; i++){
                      let texto = "Fichas jugador 2";
-                     this.context.font="10pt Verdana";
+                     this.context.fillStyle = 'white';
                      this.context.fillText(texto,700,50);
-                    let token                                 // en el caso 2 sucede lo mismo que en el caso 1 pero cambian los datos ya que es para crear las fichas del jugador 2
+                    let token;                                 // en el caso 2 sucede lo mismo que en el caso 1 pero cambian los datos ya que es para crear las fichas del jugador 2
                     token = new Circle(px, py, 20, this.colour, this.context);
                     this.token2.push(token);
                     py = py + 15; 
@@ -63,15 +63,14 @@ class Token {
         let canvas = document.querySelector("canvas");
         let context = canvas.getContext("2d"); 
         let texto = "Fichas jugador 1";
-         context.fillStyle = "black"
-        context.font="10pt Verdana";
-         context.fillText(texto,10,50);
+        context.fillStyle = "white";
+        context.font = '20px Arial'
+        context.fillText(texto,10,50);
         tokens2.forEach(T => {
             T.draw()
         });
          texto = "Fichas jugador 2";
-         context.fillStyle = "black"
-         context.font="10pt Verdana";
+         context.fillStyle = "white"
          context.fillText(texto,700,50);
         tokens1.forEach(t => {
             t.draw();

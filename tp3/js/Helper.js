@@ -20,7 +20,7 @@ class Helper {
             Helper.redraw(); // vuelve a dibujar
         }
     }
-    // cuando se levanta el click se actiiva este metodo 
+    // cuando se levanta el click se activa este metodo 
     static onMouseUp(e){
         isMouseDown = false; // la variable q dice si se esta haciendo click pasa a falsa 
         let rectan = allConteiners.array // guardo cada fleca que esta sobre el tablero 
