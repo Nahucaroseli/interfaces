@@ -1,22 +1,22 @@
 class Game {
-    constructor ( rows, columns, matrixGame){
+    constructor ( rows, columns, matrizJuego){
         this.rows = rows;
         this.columns = columns;
-        this.matrixGame = matrixGame;
+        this.matrizJuego = matrizJuego;
     }
 
     //Crea una matriz vacia con las filas y las columnas que hay en el tablero.
     createMatrix (){
         for(let f = 0; f <= this.rows-1; f++){
-        this.matrixGame[f] = [];
+        this.matrizJuego[f] = [];
             for (let c = 0 ; c <= this.columns-1; c++){
-                this.matrixGame[f][c]=0
+                this.matrizJuego[f][c]=0
             }
         }
     }
 
     getMatrix(){
-        return this.matrixGame;
+        return this.matrizJuego;
     }
     
     //Toma cada fila del tablero, y las marca como vacias, esto quiere decir que hay casilleros para poner fichas.
@@ -53,7 +53,7 @@ class Game {
             if (Juego.matrix[file][p] == 0 ){
                 Juego.matrix[file][position] = NombreJugador;
                 MatrixLockers.matrix[file][position].fill= jugadorActual;
-                Help.redraw()
+                Helper.redraw()
                 position = 0;
                 p= p-1
             }else{
@@ -76,7 +76,7 @@ class Game {
         if (Juego.matrix[file][p-1] == 0 ){
             Juego.matrix[file][position] = NombreJugador;
             MatrixLockers.matrix[file][position].fill= jugadorActual;
-            Help.redraw()
+            Helper.redraw()
         }   
     }
 
@@ -85,7 +85,7 @@ class Game {
         if ( Rows.empty[numberElement] == "si"){
             Token.drawInOldPosition(selected, X ,Y );
             }else{
-            Help.deleteElement(oldPositions.array,oldPositions.positionInArray);
+            Helper.deleteElement(oldPositions.array,oldPositions.positionInArray);
         }
     }
 }

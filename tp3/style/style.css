@@ -153,7 +153,7 @@ left: 0px;
     top: 200px;
 }
 
-.hero-section .btn-coming-game a{
+.hero-section .btn-coming-game a, .game_button a{
     position: relative;
     background: white;
     display: inline-block;
@@ -162,25 +162,25 @@ left: 0px;
 }
 
 
-.hero-section .btn-coming-game a span:hover{
+.hero-section .btn-coming-game a span:hover, .game_button a span:hover{
     background: rgb(218, 115, 32);
     transition: 0.5s;
     color: white;
 }
 
 
-.hero-section .btn-coming-game a:hover:before{
+.hero-section .btn-coming-game a:hover:before,.game_button a:hover:before{
     inset: -3px;
 
 }
-.hero-section .btn-coming-game a:hover:after {
+.hero-section .btn-coming-game a:hover:after , .game_button a:hover:after{
     inset: -3px;
     filter: blur(30px);
     background-size:400%;
 }
 
 
-.hero-section .btn-coming-game a span{
+.hero-section .btn-coming-game a span, .game_button a span{
     position: absolute;
     top: 0;
     left: 0;
@@ -197,7 +197,8 @@ left: 0px;
 
 }
 
-.hero-section .btn-coming-game a::after,.hero-section .btn-coming-game a::before{
+.hero-section .btn-coming-game a::after,.hero-section .btn-coming-game a::before, 
+.game_button a::after,.game_button a::before{
     content: "";
     position: absolute;
     inset: 0;
@@ -206,9 +207,10 @@ left: 0px;
     animation: animate-button 5s linear infinite;
 }
 
-.hero-section .btn-coming-game{
+.hero-section .btn-coming-game, .game_button{
     position:absolute;
-    left: 62%;
+    left: 44.5%;
+    top: 100%;
 }
 
 .hero-section-game-title{

@@ -101,21 +101,21 @@ function initGame(){
     tokenANDboard(); // llama a la funcion que crea todas las fichas y el tablero
     game(); // llama la a funcion que crea la matriz para la logica del juego 
     timer(10); // llama al timer con la cantidad de minutos que va a durar el juego   
-    document.addEventListener("mousedown", Help.onMouseDown, false);
-    document.addEventListener("mouseup", Help.onMouseUp, false);
-    document.addEventListener("mousemove", Help.onMouseMove, false);
-    // addEventListener para el movimiento de las fichas , cada funcion a las que se dirige son metodos estaticos que estan dentro d ela clase help 
+    document.addEventListener("mousedown", Helper.onMouseDown, false);
+    document.addEventListener("mouseup", Helper.onMouseUp, false);
+    document.addEventListener("mousemove", Helper.onMouseMove, false);
+    // addEventListener para el movimiento de las fichas , cada funcion a las que se dirige son metodos estaticos que estan dentro d ela clase Helper 
 }
 
 async function tokenANDboard(){
-    img = await Help.uploadImage(player1.colour); // carga la imagen selecionada por el jugador 1 , se llama a un metodo statico que carga la imagen 
+    img = await Helper.uploadImage(player1.colour); // carga la imagen selecionada por el jugador 1 , se llama a un metodo statico que carga la imagen 
     player1.colour = img; // se guarda en la constante la imagen cargada 
     playerRed = new Token(token1, token2, player1.colour, Juego.Tokens, context); //se crea una instancia de la clase token  
     playerRed.createToken(); // se llama al metodo que las crea 
     player1.arrayTokensPlayer1 = playerRed.getToken1(); // se guarda en el arreglo de la constante que le pertenece a dicho jugador , todo el arreglo que contiene todas las fichas
     playerRed.drawToken(player1.arrayTokensPlayer1);// se llama al metodo que las dibuja
     
-    img = await Help.uploadImage(player2.colour);
+    img = await Helper.uploadImage(player2.colour);
     player2.colour = img;
     playerGreen = new Token(token1, token2, player2.colour,Juego.Tokens, context);
     playerGreen.createToken();
@@ -125,8 +125,8 @@ async function tokenANDboard(){
 }
 
 async function board(){
-    img = await Help.uploadImage("./img/table.jpeg"); //Carga la imagen.
-    let imagen = await Help.uploadImage("./img/Flecha.jpg"); //Carga la imangen de la flecha que estan por encima del tablero.
+    img = await Helper.uploadImage("./img/table.jpeg"); //Carga la imagen.
+    let imagen = await Helper.uploadImage("./img/Flecha.jpg"); //Carga la imangen de la flecha que estan por encima del tablero.
     let  board = new Board(canvas, context, img,Juego.rows , Juego.Columns, arrayLockers,arrayConteiners,m,Juego.forma, imagen);
     board.drawBackground(); //Dibuja el tablero.
     board.createLockers();  //Dibuja los circulos dentro del tablero.

@@ -27,9 +27,9 @@ class Token {
                 let x = 95;
                 let y = 110; 
                 for(let i = 0; i < this.totalTokens; i++){  
-                    // let texto = "Fichas jugador 1";
-                    // this.context.font="10pt Verdana"; // tipo y tamaño de letra para el texto 
-                    // this.context.fillText(texto,10,50); // filltext permite poner texto dentro del canvas , pasamos como parametro el texto que queremos poner y las posiciones
+                    let texto = "Fichas jugador 1";
+                     this.context.font="10pt Verdana"; // tipo y tamaño de letra para el texto 
+                     this.context.fillText(texto,10,50); // filltext permite poner texto dentro del canvas , pasamos como parametro el texto que queremos poner y las posiciones
                     let token ; 
                     token = new Circle(x, y, 20, this.colour, this.context); // la ficha circular utlizando la clase circulo que recibe posiciones , tamaño y la imagen que se le va a colocar
                     this.token1.push(token);  // guardamos esa ficha ( "circulo") dentro del arreglo del jugador 1 ya que es el caso 1
@@ -41,9 +41,9 @@ class Token {
                 let px = 800;
                 let py = 110;
                 for(let i = 0; i < this.totalTokens; i++){
-                    // let texto = "Fichas jugador 2";
-                    // this.context.font="10pt Verdana";
-                    // this.context.fillText(texto,700,50);
+                     let texto = "Fichas jugador 2";
+                     this.context.font="10pt Verdana";
+                     this.context.fillText(texto,700,50);
                     let token                                 // en el caso 2 sucede lo mismo que en el caso 1 pero cambian los datos ya que es para crear las fichas del jugador 2
                     token = new Circle(px, py, 20, this.colour, this.context);
                     this.token2.push(token);
@@ -62,17 +62,17 @@ class Token {
     static drawTokens(tokens1,tokens2){ // es un metodo statico para que se pueda ingresar sin una instancia creada de la clase 
         let canvas = document.querySelector("canvas");
         let context = canvas.getContext("2d"); 
-        // let texto = "Fichas jugador 1";
-        // context.fillStyle = "black"
-        // context.font="10pt Verdana";
-        // context.fillText(texto,10,50);
+        let texto = "Fichas jugador 1";
+         context.fillStyle = "black"
+        context.font="10pt Verdana";
+         context.fillText(texto,10,50);
         tokens2.forEach(T => {
             T.draw()
         });
-        // texto = "Fichas jugador 2";
-        // context.fillStyle = "black"
-        // context.font="10pt Verdana";
-        // context.fillText(texto,700,50);
+         texto = "Fichas jugador 2";
+         context.fillStyle = "black"
+         context.font="10pt Verdana";
+         context.fillText(texto,700,50);
         tokens1.forEach(t => {
             t.draw();
         }); 
@@ -83,6 +83,6 @@ class Token {
     static drawInOldPosition (elemento, X ,Y ){  // a este metodo le llega una ficha y los posiciones viejas , que son las posiciones en las que estaba la ficha antes de moverla
         elemento.posX = X;  // se cambia las posiciones nuevas por las viejas
         elemento.posY = Y ;
-       Help.redraw(); // llama a un metodo statico de la clase help para volver a dibujarlas en las posiciones viejas 
+       Helper.redraw(); // llama a un metodo statico de la clase help para volver a dibujarlas en las posiciones viejas 
     }  // este metodo lo utilizamos para que cuando un jugador suelte la ficha en otro lugar que no sea el lugar donde debe soltarse , esta ficha se vuelva a dibujar en el lugar donde estaba 
 } 
