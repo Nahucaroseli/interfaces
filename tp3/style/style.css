@@ -1344,6 +1344,10 @@ height: 360px;
     height: 70px;
 }
 
+.chooseToken1 > button:hover, .chooseToken2 > button:hover{
+    animation: rotate 1s linear infinite;
+}
+
 .chooseBoard{
     text-align: center;
 }
@@ -1413,4 +1417,18 @@ height: 360px;
 .canvasPreview canvas{
     border: var(--border) solid var(--primary-secondary);
     border-radius: var(--border);
+}
+
+
+@keyframes rotate {
+
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+
+
 }

@@ -237,7 +237,7 @@ function timer(stop){
         seconds.innerHTML = countSeconds;
         countSeconds++;
         }else{
-            timeOut.innerHTML = 'Uups, se acabo el tiempo!';
+            timeOut.innerHTML = 'Se acabo el tiempo!';
             hiddenMainMenu = true,
             hiddenGame();
         }
@@ -245,22 +245,22 @@ function timer(stop){
 }
 
 function Winner (){
-    if (Juego.winner != 0 && Juego.winner != "Empate"){// este if chequea si,  no hay un ganador 
+    if (Juego.winner != 0 && Juego.winner != "Empate!"){// este if chequea si,  no hay un ganador 
         countSeconds = 0;// deja el timer en 0 para que corte el tiempo
         countMinutes = 0;
         timerDiv.style.display = 'none' // oculta el timer
         canvas.style.display = 'none'; // oculta el canvas
         mainMenu.style.visibility = 'visible'; // muestra el boton para volver a jugar
         player.style.display = 'none' // oculta el texto donde dice a q jugador le toca
-        timeOut.innerHTML = 'El jugador '+  Juego.winner  +  ' gano'; //  texto diciendo quien fue el ganador 
+        timeOut.innerHTML = 'El jugador '+  Juego.winner  +  ' gano!'; //  texto diciendo quien fue el ganador 
         finishGame.style.display = 'block'; // muestra el texto 
-    }else if (Juego.winner =="Empate"){ // si no hubo un ganador preguntapor un empate  
+    }else if (Juego.winner =="Empate!"){ // si no hubo un ganador preguntapor un empate  
         countSeconds = 0;
         countMinutes = 0;
         timerDiv.style.display = 'none'
         canvas.style.display = 'none';
         mainMenu.style.visibility = 'visible';
-        timeOut.innerHTML = ' Nadie a ganado esto es un Empate!'; // texto diciendo que fue un empate
+        timeOut.innerHTML = 'Ninguno gano, Empate!!'; // texto diciendo que fue un empate
         player.style.display = 'none'
         finishGame.style.display = 'block';
     }
