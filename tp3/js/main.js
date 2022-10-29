@@ -101,9 +101,9 @@ function initGame(){
     tokenANDboard(); // llama a la funcion que crea todas las fichas y el tablero
     game(); // llama la a funcion que crea la matriz para la logica del juego 
     timer(10); // llama al timer con la cantidad de minutos que va a durar el juego   
-    document.addEventListener("mousedown", Helper.onMouseDown, false);
-    document.addEventListener("mouseup", Helper.onMouseUp, false);
-    document.addEventListener("mousemove", Helper.onMouseMove, false);
+    canvas.addEventListener("mousedown", Helper.onMouseDown, false);
+    canvas.addEventListener("mouseup", Helper.onMouseUp, false);
+    canvas.addEventListener("mousemove", Helper.onMouseMove, false);
     // addEventListener para el movimiento de las fichas , cada funcion a las que se dirige son metodos estaticos que estan dentro d ela clase Helper 
 }
 
