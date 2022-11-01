@@ -48,6 +48,59 @@ document.addEventListener("DOMContentLoaded", () => {
         burgerMenu.classList.toggle('active');
 
     })
+    const slider = document.querySelectorAll(".slider-inner");
+    const progressbar = document.querySelectorAll(".progress-bar-inner");
+    //Carousel slider
+
+    let buttonPrev = document.querySelectorAll("#button-prev");
+    let buttonNext = document.querySelectorAll("#button-next");
+    
+    for(let button1 of buttonPrev){
+        button1.addEventListener("click",()=>{
+            moveCarouseltoLeft(button1.dataset.button);
+        })
+    }
+    for(let button2 of buttonNext){
+        button2.addEventListener("click",()=>{
+            moveCarouseltoRight(button2.dataset.button);
+        })
+    }
+
+    function moveCarouseltoLeft(id){
+        slider.forEach(element =>{
+                if(id === element.dataset.slider){
+                    if(element.parentElement.scrollLeft == 0){
+
+                        return;
+                    }
+                    else{
+                        element.parentElement.scrollLeft -= 270;
+                    }
+                }
+                    
+
+            
+        })
+    }
+
+    function moveCarouseltoRight(id){
+        slider.forEach(element =>{
+                if(id ===element.dataset.slider){
+                    if(element.parentElement.scrollLeft == 1079){
+
+                        return;
+                    }
+                    else{
+                        element.parentElement.scrollLeft += 270;
+                    }
+                }
+                
+
+            
+        })
+    }
+
+
 
 
     //Carousel Main Index
@@ -89,10 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     //carousel with progress bar
-    const slider = document.querySelectorAll(".slider-inner");
-    const progressbar = document.querySelectorAll(".progress-bar-inner");
-
-
+   
     let slidergrabbed = false;
 
      slider.forEach(a =>{

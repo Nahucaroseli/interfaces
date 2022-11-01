@@ -1117,6 +1117,15 @@ height: 360px;
     margin-top: 7rem;
 }
 
+.slider-wrap .button-carousel-prev{
+   display: none;
+
+}
+.slider-wrap .button-carousel-next{
+   
+    display: none;
+}
+
 
 
 @media screen and (min-width:800px) {
@@ -1143,6 +1152,8 @@ height: 360px;
 
 
 @media screen and (min-width:1100px) { 
+
+    
 
     .main-carousel .btn-game-lobo{
         top: 45%;
@@ -1203,6 +1214,35 @@ height: 360px;
 
     .profile{
             right: 5%;
+
+    }
+
+    .slider-wrap .button-carousel-prev{
+        display: block;
+        position: relative;
+        z-index: 1;
+        left: 0%;
+        top: 35%;
+        height: 50px;
+        width: 50px;
+        background-image: url(../img/vector1.png);
+        background-size: cover;
+
+    }
+    .slider-wrap .button-carousel-next{
+        display: block;
+        position: relative;
+        z-index: 1;
+        left: 95%;
+        top: -43%;
+        height: 50px;
+        width: 50px;
+        background-image: url(../img/vector2.png);
+        background-size: cover;
+
+    }
+    .slider-wrap .button-carousel-next:hover, .slider-wrap .button-carousel-prev:hover{
+        cursor: pointer;
 
     }
 
