@@ -207,10 +207,22 @@ left: 0px;
     animation: animate-button 5s linear infinite;
 }
 
-.hero-section .btn-coming-game, .game_button{
+.game_button{
     position:absolute;
     left: 44.5%;
     top: 100%;
+}
+
+.hero-section .btn-coming-game{
+    position: absolute;
+    left: 62%;
+    top: 80%;
+}
+
+.game-layout .btn-game-lobo{
+    position: absolute;
+    left: 48%;
+    top: 95%;
 }
 
 .hero-section-game-title{
