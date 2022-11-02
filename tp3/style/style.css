@@ -474,7 +474,7 @@ width: 439px;*/
 
 .form-item{
     height: 6.8rem;
-    width: 75.5rem;
+    width: 82rem;
     background: var(--primary);
     margin-top: 2rem;
 }
@@ -548,7 +548,7 @@ width: 439px;*/
 
 
 .form-user-message{
-    width: 1208px;
+    width: 82rem;
     background: white;
     height: 91px;
     background-image: url(../img/user-message.png);
@@ -561,7 +561,7 @@ width: 439px;*/
 }
 
 .story-section{
-    grid-column: 1/3;
+    width: 82rem;
     grid-row: 8;
     padding: 1rem;
 }
@@ -629,7 +629,7 @@ ul.breadcrumb li a:hover{
 
 .text-container{
     background:var(--primary);
-    width: 90%;
+    width: 80rem;
     padding: 1rem;
 }
 
@@ -707,14 +707,14 @@ top: 18%;
 .video{
     background-image: url(../img/video.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 76.4rem;
+    background-size:cover;
+    background-position: center;
+    width: 82rem;
     height: 35rem;
 }
 .video-section{
     grid-row: 6;
-    grid-column: 1/3;
-    width: 76rem;
+    width: 82rem;
     height: 40rem;
 }
 
@@ -953,12 +953,10 @@ border-radius: 10px;
 
 .carousel{
     margin: 1rem;
-    grid-column: 1/3;
 }
 
 
 .carousel-img{
-margin: 1rem;
 display: flex;
 flex-direction: row;
 padding: 0px;
@@ -1253,7 +1251,28 @@ height: 360px;
         background-size: cover;
 
     }
-    .slider-wrap .button-carousel-next:hover, .slider-wrap .button-carousel-prev:hover{
+    .carousel .button-carousel-prev{
+        position: absolute;
+        z-index: 1;
+        left: 1%;
+        top: 145%;
+        height: 50px;
+        width: 50px;
+        background-image: url(../img/vector1.png);
+        background-size: cover;
+    }
+    .carousel .button-carousel-next{
+        position: absolute;
+        z-index: 1;
+        left: 95%;
+        top: 145%;
+        height: 50px;
+        width: 50px;
+        background-image: url(../img/vector2.png);
+        background-size: cover;
+    }
+    .slider-wrap .button-carousel-next:hover, .slider-wrap .button-carousel-prev:hover, 
+    .carousel .button-carousel-next:hover, .carousel .button-carousel-prev{
         cursor: pointer;
 
     }
@@ -1384,6 +1403,7 @@ height: 360px;
     margin: 0;
     display: flex;
     justify-content: center;
+    background-color: var(--primary-light);
     border: var(--border) solid var(--primary-light);
     border-radius: var(--border);
     flex-direction: row;
