@@ -483,7 +483,7 @@ width: 439px;*/
 .message{
     margin: 0;
     position: absolute;
-    left: 9%;
+    left: 7.9%;
     margin-bottom: 89;
 
 }
@@ -508,16 +508,43 @@ width: 439px;*/
     cursor: pointer;
 }
 
-.form-item p#answer-button{
+#answer-button{
     position: relative;
-    margin: 0;
+    display: block;
     width:0;
-    top: 5%;
-    left: 21%;
+    top: 2rem;
+    left: 19.5%;
+    margin: 0;
+}
+
+#comment-date-1{
+    position: relative;
+    display: block;
+    left: .3%;
+}
+
+#comment-date-2{
+    position: relative;
+    display: block;
+    left: -.6%;
+}
+
+#comment-date-3{
+    position: relative;
+    display: block;
+    left: -1.6%;
 }
 
 .form-item .form-icons i#comment-icon{
+
     margin-left: 1.3rem;
+}
+
+.form-item .form-icons{
+    position: relative;
+    display: block;
+    left: 10%;
+    top:.5rem;
 }
 
 
