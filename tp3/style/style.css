@@ -1257,6 +1257,7 @@ height: 360px;
     .slider-wrap .button-carousel-prev{
         display: block;
         position: relative;
+        border: none;
         z-index: 1;
         left: 0%;
         top: 35%;
@@ -1270,6 +1271,7 @@ height: 360px;
         display: block;
         position: relative;
         z-index: 1;
+        border: none;
         left: 95%;
         top: -43%;
         height: 50px;
@@ -1281,6 +1283,7 @@ height: 360px;
     .carousel .button-carousel-prev{
         position: absolute;
         z-index: 1;
+        border: none;
         left: 1%;
         top: 145%;
         height: 50px;
@@ -1291,6 +1294,7 @@ height: 360px;
     .carousel .button-carousel-next{
         position: absolute;
         z-index: 1;
+        border: none;
         left: 95%;
         top: 145%;
         height: 50px;

@@ -1,6 +1,6 @@
 "use strict";
 
-let canvas = document.querySelector("canvas");
+var canvas = document.querySelector("canvas");
 let context = canvas.getContext("2d");
 let play = document.getElementById("frontGame");
 let timeOut = document.getElementById("timeOut");
@@ -193,14 +193,14 @@ function selectedchooseBoard (){
     });
     Juego.dimension = idButton ;
     Juego.Tokens = idButton /2;
-    if (Juego.dimension == "5*6"){
-        Juego.Columns = 6;
-        Juego.rows= 5;
-        Juego.Tokens = 5*6/2;
+    if (Juego.dimension == "8*9"){
+        Juego.Columns = 9;
+        Juego.rows= 8;
+        Juego.Tokens = 8*9/2;
     }
     if (Juego.dimension == "7*6"){
         Juego.Columns= 6;
-        Juego.rows=7
+        Juego.rows=7;
         Juego.Tokens = 7*6/2;
     }
     if(Juego.dimension == "7*8"){
@@ -208,8 +208,13 @@ function selectedchooseBoard (){
         Juego.rows = 7;
         Juego.Tokens = 7*8/2;
     }
+    if(Juego.dimension == "9*10"){
+        Juego.Columns = 10;
+        Juego.rows = 9;
+        Juego.Tokens = 9*10/2;
+    }
     if (player1.colour != null &&  player2.colour != null &&  Juego.dimension != null){
-        botonJugar.style.visibility = 'visible'
+        botonJugar.style.visibility = 'visible';
     }
 }
 

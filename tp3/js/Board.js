@@ -31,7 +31,7 @@ class Board {
     //Este metodo crea los circulos arriba de la imagen del board.
     createLockers(){
         let ctx = this.canvas.getContext("2d");
-        let posX = 290;
+        let posX = 240;
         let posY = 140;
         for(let f = 0; f < this.rows; f++){
             let locker
@@ -52,13 +52,16 @@ class Board {
     //Hacemos le draw de la imagen del tablero, los if son para el tamaño del tablero que se haya elegido.
     drawBackground(){
         if (Juego.dimension === "7*6"){
-            this.contexto.drawImage(this.image, 240, 110, 400, 320)
+            this.contexto.drawImage(this.image, 210, 110, 400, 320)
         }
-        if (Juego.dimension === "5*6"){
-            this.contexto.drawImage(this.image, 240, 110, 300, 320) 
+        if(Juego.dimension === "8*9"){
+            this.contexto.drawImage(this.image, 210, 110, 400, 410)
         }
         if (Juego.dimension === "7*8"){
-            this.contexto.drawImage(this.image, 240, 110, 400, 410) 
+            this.contexto.drawImage(this.image, 210, 110, 400, 410) 
+        }
+        if (Juego.dimension === "9*10"){
+            this.contexto.drawImage(this.image, 210, 110, 400, 410) 
         }
     }
 
@@ -74,7 +77,7 @@ class Board {
     //Es un cuadrado con una imagen adentro.
     drawcontainers(){
         let ctx = this.canvas.getContext("2d");
-        let posx = 280;
+        let posx = 225;
         let posy= 70;
         for (let e = 0 ; e < this.rows; e++){
             let container = new Rectangle (posx, posy, 30, 30,this.img,ctx,e);
@@ -88,13 +91,16 @@ class Board {
     //Este metodo es estatico para poder accederlo desde otra clase, y cuando se mueve una ficha se vuelve a dibujar la imagen del tablero. 
     static drawBackgroundS(contexto, i){
         if (Juego.dimension === "7*6"){
-            contexto.drawImage(i, 240, 110, 400, 320)
+            contexto.drawImage(i, 210, 110, 380, 320)
         }
-        if (Juego.dimension === "5*6"){
-            contexto.drawImage(i, 240, 110, 300, 320) 
+        if(Juego.dimension === "8*9"){
+            contexto.drawImage(i, 210, 110, 410, 470)
         }
         if (Juego.dimension === "7*8"){
-            contexto.drawImage(i, 240, 110, 400, 410) 
+            contexto.drawImage(i, 210, 110, 360, 410) 
+        }
+        if (Juego.dimension === "9*10"){
+            contexto.drawImage(i, 210, 110, 460, 520) 
         }
     }
     // Este metodo tambien es estatico y dibuja los lockers

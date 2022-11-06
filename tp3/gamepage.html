@@ -76,20 +76,16 @@
 
     <div id="frontGame">
         <div class="menu_4linea">
-            <h3> Leer antes de jugar! </h3>
+            <h3> ¿Como jugar?</h3>
             <div class="help">
                 <p>
-                    ● Antes de jugar, se debera elegir una ficha para cada jugador y tamaño el tablero. <br>
                     ● Arrastrar y soltar las fichas en las flechas rojas encima del tablero. <br>
-                    ● Si la ficha se suelta fuera de la flecha, esta volvera a su posicion inicial.
                 </p>
                 <p>
-                    ● Hasta que el jugador no juegue, no va a cambiar el turno. <br>
-                    ● Habra un contador de 10 minutos para poder ganar <br>
-                    ● Utilizar Chrome v92.0.4515.159
+                    ● Los jugadores tienen 10 minutos para poder obtener su victoria. <br>
+                    ● Testeado en Chrome 92.0.4515.159
                 </p>
             </div>
-
             <div class="tokens">
                 <h4> Elegir ficha para el Jugador 1</h4>
                 <div class="chooseToken1">
@@ -139,10 +135,12 @@
         </div>
         
         <div class="chooseBoard">
-            <h3>Dimension del tablero</h3>
-            <button class="board" id=5*6>5x6</button>
-            <button class="board" id=7*6>7x6</button>
-            <button class="board" id=7*8>7x8</button>
+            <h3>Elegir tablero</h3>
+           
+            <button class="board" id=7*6>4 en Linea</button>
+            <button class="board" id=7*8>5 en Linea</button>
+            <button class="board" id=8*9>6 en Linea</button>
+            <button class="board" id="9*10">7 en Linea</button>
         </div>
 
         <div class="game_button" id="g" onclick="initGame()">
@@ -162,7 +160,7 @@
     </div>
 
     <div class="canvasPreview">
-        <canvas id="canvas" width="900" height="600"></canvas>
+        <canvas id="canvas" width="900" height="800"></canvas>
     </div>
     <section class="carousel">  
         <div>
@@ -200,19 +198,7 @@
         <button class="button-carousel-next" id="button-next" data-button="1"></button>
         <div class="progress-bar-inner" data-bar="1"></div>
     </section>
-    <section class="instruction-section">
-        <div class="help-section">
-            <h1>
-                ¿Como Jugar?
-            </h1>
-            <div class="text-container">
-                <p>El 4 en Linea (Aliens vs Werewolvs) se juega de a dos jugadores sobre un tablero de siete columnas y seis filas.</p>
-                <p>El objetivo es alinear cuatro fichas de un mismo jugador, horizontalmente, verticalmente o en diagonal. Las fichas tienen que ponerse en la linea inferior o sobre otra</p>
-                <p>ficha.</p>
-            </div>
-        </div>
-     </section>
-    
+   
     <section class="video-section">
        
         <h1> 
