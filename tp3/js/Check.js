@@ -27,13 +27,11 @@ class Check {
         }
         let bd = Juego.matrix;// guardo la matrix del juego 
         if(Juego.dimension == "7*6"){
-            console.log("HOLAAAAAAAAAAAAAAAAA")
                 //verifica en vertical , rrecorre cada columna que hay por fila  , por eso la suma va a aumentar en columna , la fila es la misma pero la columna va cambiando 
             for (let r = 0; r <= Juego.rows-1; r++){   // recorre cada fila 
                 for (let c = 0; c <= Juego.Columns-1/2; c++){
                     if (Check.chkLine(bd[r][c], bd[r][c+1], bd[r][c+2], bd[r][c+3],null,null,null,Juego.dimension)){ // llama a la funcion que chekea si cuatro son iguales pasandole como parametro el valor que tiene la matriz en las 4 posiciones seguidas
                         Juego.winner = bd[r][c]; // si son iguales llama a la funcion winner 
-                        console.log("hola")
                         return bd[r][c];
                     }
                 }
@@ -201,10 +199,6 @@ class Check {
             }
         }
          
-
-
-
-
         if (player1.arrayTokensPlayer1.length === 0 && player2.arrayTokensPlayer2.length === 0 ) { // si ambos arreglos de fichas estan vacios quiere decir que el tablero esta lleno y ninguno de los jugadores gano
             Juego.winner = "Empate"; // entonces hay un empate 
             return   Juego.winner ;

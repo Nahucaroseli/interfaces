@@ -8,6 +8,7 @@ let mainMenu = document.getElementById("menu_4linea");
 let timerDiv = document.getElementById("timer");
 let player = document.getElementById("jugador");
 let botonJugar = document.getElementById("g");
+let btnReiniciar = document.getElementById("reiniciar");
 let finishGame = document.getElementById("finishGame");
 let playerRed , playerGreen;
 let arrayLockers = [] ,arrayConteiners = [], matrixArray = [], token1 = [], token2 = [], m =[];
@@ -23,6 +24,10 @@ document.querySelectorAll("div.chooseToken2 > button").forEach(function(element)
 document.querySelectorAll("div.chooseBoard > button").forEach(function(element){
     element.addEventListener("click", selectedchooseBoard, false)
 });
+
+botonJugar.addEventListener("click", () => {
+    btnReiniciar.style.visibility = "visible";
+} )
 
 const Rows ={
     empty:[]
@@ -258,6 +263,7 @@ function Winner (){
         mainMenu.style.visibility = 'visible'; // muestra el boton para volver a jugar
         player.style.display = 'none' // oculta el texto donde dice a q jugador le toca
         timeOut.innerHTML = 'El jugador '+  Juego.winner  +  ' gano!'; //  texto diciendo quien fue el ganador 
+        btnReiniciar.style.visibility = "hidden";
         finishGame.style.display = 'block'; // muestra el texto 
     }else if (Juego.winner =="Empate!"){ // si no hubo un ganador preguntapor un empate  
         countSeconds = 0;
@@ -266,6 +272,7 @@ function Winner (){
         canvas.style.display = 'none';
         mainMenu.style.visibility = 'visible';
         timeOut.innerHTML = 'Ninguno gano, Empate!!'; // texto diciendo que fue un empate
+        btnReiniciar.style.visibility = "hidden";
         player.style.display = 'none'
         finishGame.style.display = 'block';
     }

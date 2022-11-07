@@ -954,7 +954,7 @@ border-radius: 10px;
 .main-carousel .slide{
     position: absolute;
     opacity: 0;
-    transition: 200ms opacity ease-in-out;
+    transition: 200ms opacity ease-out;
 }
 
 .main-carousel .slide[data-active],.main-carousel .text-carousel[data-text-active]{
@@ -1545,4 +1545,14 @@ height: 360px;
     }
 
 
+}
+
+.btn-reiniciar {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    border: 3px solid var(--primary-light);
+    border-radius: var(--border);
+    padding: 0.5%;
+    visibility: hidden;
 }
