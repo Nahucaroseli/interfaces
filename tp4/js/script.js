@@ -50,6 +50,25 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
+    window.addEventListener('scroll',revealCards);
+
+    function revealCards(){
+        let reveals = document.querySelectorAll(".game-card-reveal"); 
+
+        for(let i =0;i<reveals.length;i++){
+            let windowHeight = window.innerHeight;
+            let revealLeft = reveals[i].getBoundingClientRect().top;
+            let revealPoint = 200;
+
+            if(revealLeft < windowHeight-revealPoint){
+                reveals[i].classList.add('card-active');
+            }else{
+                reveals[i].classList.remove('card-active');
+            }
+        }
+    }
+
+
     const slider = document.querySelectorAll(".slider-inner");
     const progressbar = document.querySelectorAll(".progress-bar-inner");
     //Carousel slider
