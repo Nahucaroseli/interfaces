@@ -23,10 +23,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    width: 423px;
-    height: 618px;
+    z-index: 1;
+    width: 550px;
+    height: 650px;
     left: 145px;
-    top: 15.3%;
+    top: 29%;
 }
 
 
@@ -242,20 +243,45 @@ left: 0px;
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
-    width: 258px;
-    height: 225px;
+    width: 250px;
+    height: 220px;
     left: 861px;
     top: 220px;
 }
 
+.smoke{
+    background-image: url(../img/smoke-parallax.png);
+    height: 299px;
+    background-size: contain;
+    animation: smoke 200s infinite linear;
+}
+
+.bush-parallax{
+    position: relative;
+    top: -15%;
+    width: 119px;
+    margin: 0;
+    animation: translatebush 15s infinite linear;
+}
+
+.bush-parallax img{
+    position: absolute;
+    margin: 0;
+    height: 140px;
+    width: 119px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: bush 3s infinite linear;
+}
+
 
 .hero-section{
-    background-image: url(../img/hero-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(../img/hero-background.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
     grid-column: 1/-1;
     width: 100%;
-    height: 41.5rem;
+    height: 50rem;
 }
 
 
@@ -821,6 +847,34 @@ top: 18%;
     width: 82rem;
     height: 40rem;
 }
+
+@keyframes translatebush {
+    from{
+        transform: translate(1090%);
+    }
+    to{
+        transform: translate(-10%);
+    }
+    
+}
+
+@keyframes bush {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes smoke {
+    from {background-position-x:15000px;
+  
+      }
+    to {background-position-x:  -3929px;
+     
+    }
+  }
 
 @keyframes animate-button {
     0%{
