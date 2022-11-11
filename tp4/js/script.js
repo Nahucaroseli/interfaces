@@ -49,21 +49,21 @@ document.addEventListener("DOMContentLoaded", () => {
         menuIcon.classList.toggle('is-active');
     })
 
-
+    //Revelar las cards al hacer scroll
     window.addEventListener('scroll',revealCards);
 
     function revealCards(){
-        let reveals = document.querySelectorAll(".game-card-reveal"); 
+        let reveals = document.querySelectorAll(".game-card-reveal");// agarramos las cards que queremos revelar
 
-        for(let i =0;i<reveals.length;i++){
+        for(let i =0;i<reveals.length;i++){//recorremos con un for las cards
             let windowHeight = window.innerHeight;
             let revealLeft = reveals[i].getBoundingClientRect().top;
-            let revealPoint = 200;
+            let revealPoint = 200;//seteamos el punto donde queremos revelar las cards
 
             if(revealLeft < windowHeight-revealPoint){
-                reveals[i].classList.add('card-active');
+                reveals[i].classList.add('card-active');//aplicamos la clase card-active para hacer aparecer las cards
             }else{
-                reveals[i].classList.remove('card-active');
+                reveals[i].classList.remove('card-active');// removemos la clase si no estamos en el punto de scroll que queremos
             }
         }
     }

@@ -247,7 +247,9 @@ left: 0px;
     height: 220px;
     left: 861px;
     top: 220px;
+    animation: gametitle 10s infinite;
 }
+
 
 .smoke{
     background-image: url(../img/smoke-parallax.png);
@@ -846,6 +848,26 @@ top: 18%;
     grid-row: 6;
     width: 82rem;
     height: 40rem;
+}
+
+@keyframes gametitle {
+    20%{
+
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
 }
 
 @keyframes translatebush {
