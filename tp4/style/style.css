@@ -326,8 +326,21 @@ header{
     position: sticky;
     top: 0;
     z-index: 4;
+    transition: 0.5s;
 }
 
+.enlarge {
+}
+
+.reduce {
+    height: 60px;
+    font-size: 10px;
+    background-color: var(--primary-light);
+}
+
+.largeLogo {
+    width: 2.8rem;
+}
 
 
 #content{

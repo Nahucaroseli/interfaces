@@ -206,6 +206,26 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
+
+    //header sticky
+
+    const headerClass = document.querySelector('.headerClass');
+    const logo = document.querySelector('.logo');
+    console.log(logo);
+    let prevY = window.scrollY; //Posicion del scroll al inicio
+    //Detecto la posicion del scroll
+    window.addEventListener('scroll', function(){
+        if(prevY > window.scrollY) { //si sube
+            headerClass.classList.add('enlarge')
+            headerClass.classList.remove('reduce')
+            logo.classList.remove('largeLogo');
+        } else {
+            headerClass.classList.add('reduce')
+            headerClass.classList.remove('enlarge')
+            logo.classList.add('largeLogo');
+        }
+        prevY = window.scrollY; //seteo la posicion del scroll
+    })
     
 })
 
