@@ -350,6 +350,10 @@ h1{
 
 .reduce .logo {
     left: 7%;
+    top: 10%;
+    background-size: 50px;
+    height:auto;
+    background-repeat: no-repeat;
 }
 
 #content{
@@ -968,12 +972,8 @@ top: 18%;
 .character-card{
     width: 270px;
     border-radius: 10px;
-height: 390px;
-overflow: hidden;
-
-
-
-
+    height: 390px;
+    overflow: hidden;
 
 }
 .character-card img{
