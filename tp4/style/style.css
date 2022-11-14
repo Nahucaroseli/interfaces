@@ -331,6 +331,37 @@ h1{
     
 }
 
+.carsprite{
+    background: url(../img/policecarsprite.png);
+    position: relative;
+    left: 20%;
+    height: 100px;
+    bottom: -50px;
+    width: 50%;
+background-repeat: no-repeat;
+background-size: contain;
+
+}
+
+.streetSprite{
+    background: url(../img/streetsprite.png);
+    position: relative;
+    width: 103.2%;
+    height: 200px;
+    background-size:contain;
+    animation: movestreet 5s linear infinite;
+}
+
+.spriteSheet{
+    background: url(../img/charactersprite.png) repeat-x;
+    width: 70px;
+    height: 120px;
+    bottom: 50px;
+    margin: auto;
+    position: relative;
+    animation: walk .4s steps(5) infinite;
+}
+
 .reduce {
     height: 60px;
     font-size: 10px;
@@ -873,6 +904,18 @@ top: 18%;
     width: 82rem;
     height: 40rem;
 }
+
+@keyframes movestreet {
+    0% { background-position:550px } 
+  100% { background-position:0 }
+}
+
+@keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-408px }
+  }
 
 @keyframes gametitle {
     20%{
