@@ -68,6 +68,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    let storyCards = document.querySelectorAll(".story-item");
+    document.querySelector(".story-section").addEventListener('scroll',()=>{
+        let scrollposition = document.querySelector(".story-section").scrollTop;
+        if(scrollposition>900 && scrollposition<2000){
+            storyCards[0].classList.add("show-story-img");
+        }
+        if(scrollposition>1000 && scrollposition<3150){
+            storyCards[1].classList.add("show-story-img");
+        }
+        if(scrollposition>3550 && scrollposition<3967){
+            storyCards[2].classList.add("show-story-img");
+        }
+    })
+
 
     const slider = document.querySelectorAll(".slider-inner");
     const progressbar = document.querySelectorAll(".progress-bar-inner");
