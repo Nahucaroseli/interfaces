@@ -335,12 +335,43 @@ h1{
     background: url(../img/policecarsprite.png);
     position: relative;
     left: 20%;
-    height: 100px;
-    bottom: -50px;
+    height: 120px;
+    bottom: -45px;
     width: 50%;
 background-repeat: no-repeat;
 background-size: contain;
 
+}
+
+.carsprite .carRedLight{
+    position: relative;
+    left: 15%;
+    top: 34%;
+    height: 20px;
+    background: rgb(199, 7, 7);
+    box-shadow: 0 0 50px red,
+                0 0 50px red,
+                0 0 50px red,
+                0 0 50px red,
+                0 0 50px red;
+    width: 20px;
+    animation: carLight 1.5s linear infinite;
+}
+
+.carsprite .carBlueLight{
+    position: relative;
+    left: 15%;
+    top: 30%;
+
+    height: 20px;
+    background: rgb(0, 0, 255);
+    box-shadow: 0 0 50px rgb(76, 76, 236),
+                0 0 50px rgb(76, 76, 236),
+                0 0 50px rgb(76, 76, 236),
+                0 0 50px rgb(76, 76, 236),
+                0 0 50px rgb(76, 76, 236);
+    width: 20px;
+    animation: carLight 1.5s linear infinite;
 }
 
 .streetSprite{
@@ -355,7 +386,7 @@ background-size: contain;
 .spriteSheet{
     background: url(../img/charactersprite.png) repeat-x;
     width: 70px;
-    height: 120px;
+    height: 70px;
     bottom: 50px;
     margin: auto;
     position: relative;
@@ -474,16 +505,18 @@ background-size: contain;
 }
 
 .hamburger.is-active:before{
+    animation: burgerMenubefore 2s forwards;
     transform: rotate(-45deg) translate(-8px,6px);
 
 }
 
 .hamburger.is-active::after{
+    animation: burgerMenuafter 2s forwards;
     transform: rotate(45deg) translate(-9px,-8px);
 }
 
 .hamburger.is-active .bar{
-    opacity: 0;
+    animation: opacityburgerMenu 100ms forwards;
 }
 
 
@@ -973,6 +1006,53 @@ top: 18%;
     width: 82rem;
     height: 40rem;
 }
+
+
+@keyframes carLight {
+    50%{
+        filter: brightness(50%);
+        filter: contrast(20%);
+    }
+    100%{
+       filter: brightness(100%);
+       filter: contrast(200%);
+
+    }
+}
+
+
+@keyframes opacityburgerMenu {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes burgerMenuafter{
+
+    from{
+        transform: rotate(-5deg) translate(-8px,6px);
+    }
+    to{
+        transform: rotate(45deg) translate(-9px,-8px);
+    }
+    
+}
+
+@keyframes burgerMenubefore{
+
+    from{
+        transform: rotate(10deg) translate(-9px,-8px);
+    }
+    to{
+        transform: rotate(-45deg) translate(-8px,6px);
+    }
+   
+} 
+    
 
 @keyframes showstoryimage{
     from{
