@@ -93,11 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
         slider.forEach(element =>{
                 if(id === element.dataset.slider){
                     if(element.parentElement.scrollLeft == 0){
-
                         return;
                     }
                     else{
-                        element.parentElement.scrollLeft -= 270;
+                        element.style.setProperty('--scroll',element.parentElement.scrollLeft-=270);
                     }
                 }
                     

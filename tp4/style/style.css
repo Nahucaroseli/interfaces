@@ -396,7 +396,6 @@ background-size: contain;
 .reduce {
     height: 60px;
     font-size: 10px;
-    background-color: var(--primary-light);
     background-size: 25% 25%;
 }
 
@@ -982,6 +981,63 @@ top: 18%;
     text-align: center;
 }
 
+
+.coming-game-images{
+    padding: 2rem;
+
+}
+
+.coming-game-images .slider-wrapper{
+
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+
+}
+.coming-game-images .slider-wrapper .slider-nav{
+
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+}
+.coming-game-images .slider-wrapper .slider-nav a{
+
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+
+}
+.coming-game-images .slider-wrapper .coming-game-slider{
+
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+
+}
+.coming-game-images .slider-wrapper .coming-game-slider::-webkit-scrollbar{
+
+    display: none;
+
+}
+
+.coming-game-images .slider-wrapper .coming-game-slider img{
+
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+
+}
+
 .slider{
     background-image: url(../img/Game.png);
     background-repeat: no-repeat;
@@ -1053,6 +1109,12 @@ top: 18%;
    
 } 
     
+
+@keyframes carousel {
+    to{
+        transition:all 1s;
+    }
+}
 
 @keyframes showstoryimage{
     from{
@@ -1212,6 +1274,9 @@ border-radius: 10px;
     justify-content: space-between;
     width: 2000px;
     height: 420px;
+    animation: carousel 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
 }
 
 .slider-inner .character-card > *{
