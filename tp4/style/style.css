@@ -987,6 +987,16 @@ top: 18%;
 
 }
 
+.burger-menu ul .slide-item{
+    position: relative;
+}
+
+.burger-menu ul .slide-item.slide-item-animation{
+    animation: slideitem 1s forwards;
+}
+
+
+
 .coming-game-images .slider-wrapper{
 
     position: relative;
@@ -1063,6 +1073,16 @@ top: 18%;
     height: 40rem;
 }
 
+
+@keyframes slideitem {
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+
+    }
+}
 
 @keyframes carLight {
     50%{

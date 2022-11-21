@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const profile = document.querySelector(".profile");
     const menuIcon = document.querySelector(".hamburger");
     const burgerMenu = document.querySelector(".burger-menu");
+    const burgermenuitems = document.querySelectorAll(".slide-item");
     const close = document.querySelectorAll(".close-icon");
     const userMenu = document.querySelector(".menu-user");
     
@@ -45,9 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     })
     menuIcon.addEventListener("click",() =>{
+        let delay = 0;
         burgerMenu.classList.toggle('active');
         menuIcon.classList.toggle('is-active');
+        for(let i=0; i<burgermenuitems.length;i++){
+            burgermenuitems[i].classList.toggle('slide-item-animation');
+            burgermenuitems[i].style.animationDelay = `${delay}ms`;
+            delay+= 170;
+        }
     })
+
 
     //Revelar las cards al hacer scroll
     window.addEventListener('scroll',revealCards);
