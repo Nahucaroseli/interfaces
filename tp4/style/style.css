@@ -1149,7 +1149,7 @@ top: 18%;
 }
 
 @keyframes movestreet {
-    0% { background-position:550px } 
+    0% { background-position:400px } 
   100% { background-position:0 }
 }
 
