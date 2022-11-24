@@ -135,6 +135,8 @@ left: 0px;
     opacity: 1;
 }
 
+
+
 .history {
     width: 90%;
 } 
@@ -1593,6 +1595,14 @@ height: 360px;
 .slider-wrap .button-carousel-next{
    
     display: none;
+}
+
+.slider-wrap #title-characters-section{
+    position: relative;
+    top: -55%;
+    opacity: 0;
+    transition: all 3s ease-out;   
+
 }
 
 
