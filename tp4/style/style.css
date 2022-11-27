@@ -330,6 +330,7 @@ h1{
     position: sticky;
     top: 0;
     z-index: 4;
+    transition: all 800ms ease;
     
 }
 
@@ -397,26 +398,24 @@ background-size: contain;
 
 .reduce {
     height: 60px;
-    font-size: 10px;
-    background-size: 25% 25%;
+}
+
+.reduce .logo{
+    width: 4.0rem;
+}
+
+.reduce .element-scale{
+    font-size: 14px;
+    transition: all 800ms ease;
 }
 
 .reduce .hamburger{
-    left: 80%;
-    width: 25px;
-    height: 25px;
+    width: 30px;
 }
 
-.reduce .profile {
-    left: 75%;
-}
-
-.reduce .logo {
-    left: 7%;
-    top: 10%;
-    background-size: 50px;
-    height:auto;
-    background-repeat: no-repeat;
+.reduce .profile{
+    width: 1.9rem;
+    height: 35px;
 }
 
 #content{
@@ -1220,6 +1219,7 @@ top: 18%;
     background-image: url(../img/Logo.png);
     background-size: cover;
     width: 4.8rem;
+    transition: all 800ms ease;
     
 }
 
@@ -1555,7 +1555,6 @@ right: 0;
 
 .coming-btn{
     background:var(--acento-light);
-    padding: 10px;
     border-radius: 10px;
     -webkit-text-stroke: 0.8px black;
     text-decoration: none;
