@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-
     //Revelar las cards al hacer scroll
     window.addEventListener('scroll',revealCards);
 

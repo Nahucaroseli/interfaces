@@ -781,78 +781,73 @@ width: 439px;*/
 }
 
 .story-section{
-    width: 90%;
-    overflow: hidden;
-    gap: 0.5rem;
     display: flex;
-    justify-content: flex-start;
-    flex-flow: row wrap;
-    grid-row: 8;
-    padding: 1rem;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-.story-section h1{
-    position: relative;
-    top: 0%;
+.story-section .sticky-story-section-img{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    left: 1%;
+    top: 15%;
+
+
 }
 
-.story-section > article{
-        display: flex;
-        flex-flow: column;
-        gap: 25px;
-        overflow: scroll;
-        max-height: 35em;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        padding-top: 10px;
-        margin-top: 0.9em;
+.scroll-story-section-text{
+position: relative;
+width: 50%;
+left: 20%;
 }
 
-.story-section > article::-webkit-scrollbar{
+.scroll-story-section-text .story-text{
+
+    font-family: var(--h1);
+    height: 300px;
+    color: #fffef8;
+    margin: 25px 50px 100px 50px;
+    text-align: center;
+    font-size: x-large;
+    transition: opacity .4s ease-in-out;
+}
+
+.hide-text{
+    opacity: 0;
+  }
+  
+.hide-img{
     display: none;
 }
-.story-item{
+
+
+
+.sticky-story-section-img .story-img{
+    height: 600px;
+    width: 70%;
+
+}
+
+.sticky-story-section-img .story-img:nth-child(1){
+    background: url(../img/character1.jpg);
+    background-size: cover;
     opacity: 0;
-    position: relative;
-    padding-left: 4px;
-    padding-right: 4px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05));
+    transition: opacity .4s ease-in-out;
+}
+.sticky-story-section-img .story-img:nth-child(2){
+    background: url(../img/character2.jpg);
+    background-size: cover;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+.sticky-story-section-img .story-img:nth-child(3){
+    background: url(../img/character3.jpg);
+    background-size: cover;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
 }
 
-.story-item .story-img{
-        position: sticky;
-        top: 0;
-        float: left;
-        border-radius: 4px;
-        height: 34em;
-
-}
-
-.show-story-img{
-    animation: showstoryimage ease-in 800ms forwards;
-}
-
-.story-section .story-text{
-        display: flex;
-        flex-flow: column;
-        gap: 20px;
-        min-height: 120vh;
-        margin-left: 52%;
-        padding-top: 14em;
-        padding-left: 2em;
-        padding-right: 2em;
-}
-
-
-.story-item .story-img img{
-    position: relative;
-        height: 100%;
-        width: auto;
-        left: 50%;
-        transform: translateX(-50%);
-    border-radius: 10px;
-
-}
 
 ul.breadcrumb{
     padding: -5px 35px;
